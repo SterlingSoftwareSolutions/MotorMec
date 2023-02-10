@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('type')->default(0);
             $table->string('name');
-            $table->string('businessname')->nullable();
             $table->string('username')->unique()->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('phone')->unique()->nullable();
+            $table->string('businessname')->nullable();
             $table->string('location')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
