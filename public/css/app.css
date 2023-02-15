@@ -1,0 +1,129 @@
+*{
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.header{
+    height: 40px;
+    background-color: #E1701A;
+    color: white;
+    transition: 0.4s;
+    padding: 3px;
+}
+
+.header a{
+    color: inherit;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+    margin-left: -0px;
+}
+
+.navbar {
+    width: 300px !important;
+    height: 100vh;
+    position: fixed;
+    margin-left: -0px;
+    background-color: #4B4B4B;
+    transition: 0.4s;
+}
+
+.navbar-collapse{
+    margin-top: 0 !important;
+    align-items: baseline !important;
+    width: max-content !important;
+}
+
+
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-link{
+    font-size: 1.25em !important;
+    color: white !important;
+    width: 300px !important;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover{
+    background-color: black;
+}
+
+.sidebar-dropdown-menu{
+    background-color: #4B4B4B !important;
+    width: 300px;
+    border: none !important;
+}
+
+.dropdown-item{
+    color: white !important;
+}
+
+.sidebar-dropdown-item:active,
+.sidebar-dropdown-item:focus,
+.sidebar-dropdown-item:hover{
+    background-color: black !important;
+}
+
+.active-nav {
+    margin-left: 0px;
+}
+
+.active-cont {
+    margin-left: -300px;
+}
+
+.navbar .navbar-toggler{
+    color: white;
+}
+
+#menu-btn{
+    background-color: inherit;
+    color: white;
+}
+
+.right{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right svg{
+    margin: 10px;
+}
+
+.right img{
+    width: 20px;
+}
+
+
+
+.profile-btn{
+    text-align: center !important;
+    background-color: #6E6E6E !important;
+    margin-bottom: 5px;
+    width: 80% !important;
+    border-radius: 10px !important;
+    margin-left: 10%;
+}
+
+.logout-btn{
+    text-align: center !important;
+    border-radius: 10px !important;
+    background-color: #DB4848 !important;
+    width: 80% !important;
+    margin-left: 10%;
+}
