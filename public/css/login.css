@@ -1,0 +1,116 @@
+body{
+    background-image: linear-gradient(to right, #F7A440, #D84A00);
+    font-family: 'Poppins', sans-serif !important;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    float: left;
+    padding: 0 !important;
+    background: white;
+    display: flex;
+    height: 550px;
+    margin-top: 7.5vh;
+    border-radius: 2em;
+    line-height: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img{
+    margin: 0 !important;
+    width: 50%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 2em 0 0em 2em;
+}
+
+.container #form {
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#form h2{
+    color: #E1701A;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#form h4{
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.agree{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.agree input[type=checkbox] {
+    accent-color: #E1701A;
+    width: 18px;
+    cursor: pointer;
+  }
+
+.agree a {
+    color: inherit;
+}
+
+.forgot p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.copyright h6{
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 60%;
+    color: white;
+    background-color: #E1701A;
+    border: none;
+    border-radius: 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.input-control input{
+    border: none;
+    width: 70%;
+    background-color: #e1701a34;
+    border-radius: 0.5em;
+    padding: 10px;
+    margin: 5px;
+}
+
+.input-control input:focus{
+    outline: 0;
+}
+
+.input-control.success input{
+    border-color: #09c372;
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control.error {
+    color: #ff3860;
+    font-size: 9px;
+}
