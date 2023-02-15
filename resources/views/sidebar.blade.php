@@ -10,13 +10,13 @@
           <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Applications
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">All Applications</a></li>
-            <li><a class="dropdown-item" href="#">Create Application</a></li>
-            <li><a class="dropdown-item" href="#">Pending Applications</a></li>
-            <li><a class="dropdown-item" href="#">Completed  Applications</a></li>
-            <li><a class="dropdown-item" href="#">Deleted Applications</a></li>
-            <li><a class="dropdown-item" href="#">Draft Applications</a></li>
+          <ul class="dropdown-menu sidebar-dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">All Applications</a></li>
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Create Application</a></li>
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Pending Applications</a></li>
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Completed  Applications</a></li>
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Deleted Applications</a></li>
+            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Draft Applications</a></li>
           </ul>
         </li>
     </ul>

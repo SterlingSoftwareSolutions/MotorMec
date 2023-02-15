@@ -9,10 +9,10 @@
   <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
   <img src="{{asset('images/profile.png')}}" alt="">
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><button class="dropdown-item" type="button">Action</button></li>
-    <li><button class="dropdown-item" type="button">Another action</button></li>
-    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  <ul class="dropdown-menu profile-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item profile-btn" type="button">Profile</button></li>
+    <li><button class="dropdown-item profile-btn" type="button">Billing</button></li>
+    <li><button class="dropdown-item logout-btn" type="button">Logout</button></li>
   </ul>
 </div>
       
