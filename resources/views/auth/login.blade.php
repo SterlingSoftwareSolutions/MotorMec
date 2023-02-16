@@ -32,7 +32,7 @@
             <button type="submit ">log in</button>
 
             <div class="sign-up">
-                <h6 class="mt-4">Dont have an Account?  Sign up</h>
+            <h6 class="mt-4">Dont have an Account? <a href="/register">Sign up</a> </h6>
             </div>
 
             <div class="copyright">

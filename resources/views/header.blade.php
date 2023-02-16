@@ -1,5 +1,5 @@
 @section('header')
- <div class="header">
+ <div class="header-bar">
       <button class="btn" id="menu-btn">
       <i class="fa fa-bars"></i>
       </button>

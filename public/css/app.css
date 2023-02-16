@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins', sans-serif !important;
 }
 
-.header{
+.header-bar{
     height: 40px;
     background-color: #E1701A;
     color: white;
@@ -16,8 +16,12 @@ body{
     padding: 3px;
 }
 
-.header a{
+.header-bar a{
     color: inherit;
+}
+
+a{
+    color: inherit !important;
 }
 .content{
     display: flex;
