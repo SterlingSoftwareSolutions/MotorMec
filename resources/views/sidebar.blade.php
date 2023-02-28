@@ -6,19 +6,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Dashboard</a>
       </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Applications
-          </a>
-          <ul class="dropdown-menu sidebar-dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">All Applications</a></li>
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Create Application</a></li>
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Pending Applications</a></li>
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Completed  Applications</a></li>
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Deleted Applications</a></li>
-            <li><a class="dropdown-item sidebar-dropdown-item" href="#">Draft Applications</a></li>
-          </ul>
-        </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Create New Application</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Applications</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/">Billing</a>
+      </li>
     </ul>
   </div>
 </nav>

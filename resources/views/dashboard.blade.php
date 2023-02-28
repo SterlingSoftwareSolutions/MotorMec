@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @include('sidebar')
 @include('header')

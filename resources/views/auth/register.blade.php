@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}" >
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script defer src="./index.js"></script>
 </head>
+
 <body>
-<div class="container col-9 col-sm-9 col-md-7 g-0 offset-md-3">
-        <img class="col-6 col-md-6 p-0 d-none d-sm-block" src="{{asset('images/car.jpg')}}" alt="">
-        <form class="col-12 col-md-6 h-80 align-middle" id="form" action="{{route('register')}}" method="post">
+    <div class="container mr-0">
+        <div class="logo inline">
+            <img src="{{asset('images/logo.jpg')}}" alt="">
+            <h2>Motor Mec</h2>
+        </div>
+        <form class="col-4 align-right m-0" id="form" action="{{route('register')}}" method="post">
+            @csrf
             <h2>Sign Up</h2>
             <div class="input-control">
                 <input id="name" name="name" type="text" placeholder="Name">
@@ -46,9 +52,19 @@
             <button type="submit ">Get Started</button>
 
             <div class="sign-up">
-                <h6 class="mt-4">Already have an Account? <a href="">login</a></h>
+                <h6 class="mt-4">Already have an Account? <a href="" style="color:#2B684C">login</a></h>
+            </div>
+
+            <div class="copyright">
+                <h6>
+                    MotorMec <br>
+                    © 2023. All RIGHTS RESERVED
+                    <br>
+                    <a href="">Terms of use</a> | <a href="">Privacy Policy</a>
+                </h6>
             </div>
         </form>
-    </div>   
+    </div>
 </body>
+
 </html>
