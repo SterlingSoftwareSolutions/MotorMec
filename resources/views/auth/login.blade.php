@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign in</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="container col-11 col-sm-9 col-md-7 g-0 ">
-        <img class="col-6 col-md-6 p-0" src="{{asset('images/car.jpg')}}" alt="">
-        <form class="col-6 col-md-6 h-80 align-middle" id="form" action="" method="post">
-            <h2>Sign in</h2>
-            <h4>Login with your user credentials</h4>
-            <div class="input-control">
-                <input id="sign" name="sign" type="text" placeholder="User Name, Email or Mobile Number">
-                <div class="error"></div>
-            </div><div class="input-control">
-                <input type="password" name="password" id="password" placeholder="Password">
-                <div class="error"></div>
-            </div>
-            <div class="agree row">
-                <label for=""><input type="checkbox" name="" id=""> I have read and accept terms of this <a href="">User Agreement</a></label>
-                
-            </div>
-            <div class="forgot">
-                <p><a href="">Forgot Password?</a></p>
-            </div>
-            
-            <button type="submit ">log in</button>
+    <div class="container">
+        <form class="w-50 mx-auto p-4 shadow mt-4 rounded" method="post" action="">
+            @csrf
 
-            <div class="sign-up">
-                <h6 class="mt-4">Dont have an Account?  Sign up</h>
+            <!-- Username -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Username, Email or Phone</label>
+                <input type="text" class="form-control" id="username" name="username">
             </div>
 
-            <div class="copyright">
-                <h6>
-                    MotorMec <br>
-                    © 2023. All RIGHTS RESERVED
-                </h6>
+
+            <!-- Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
             </div>
+
+            <!-- Errors -->
+            <x-input-error :messages="$errors->all()" class="mt-2" />
+
+
+            <!-- Submit -->
+            <div class="row mx-auto justify-content-between">
+                <div class="col-auto form-check my-auto">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="check">I accept the Terms of Use</label>
+                </div>
+                <div class="col-auto p-0">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+
+            <label class="form-label mt-3">Don't have an account? <a href="/register">Register</a></label>
+
         </form>
-    </div>   
+    </div>
 </body>
+
 </html>

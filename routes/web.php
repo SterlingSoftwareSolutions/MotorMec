@@ -16,18 +16,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'auth'], function(){
+    Route::get('profile', function(){
+        return view('user.profile');
+    });
+
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin'], function(){
-        Route::get('dashboard', [AdminDashboardController::class, 'index'])
-        ->name('admin/dashboard');
+        Route::get('dashboard', [AdminDashboardController::class, 'index']);
     });
 
     Route::group(['middleware' => 'role:client'], function(){
-        Route::get('dashboard', [ClientDashboardController::class, 'index'])
-        ->name('dashboard');
+        Route::get('dashboard', [ClientDashboardController::class, 'index']);
     });
 });
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/view/{view}', function($view){
     return view($view);
