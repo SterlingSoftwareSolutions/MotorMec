@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <form class="w-50 mx-auto my-4 p-4 shadow  rounded" method="post" action="">
+    <div class="container-sm">
+        <form class=" mx-auto my-4 p-4 shadow  rounded" method="post" action="">
             @csrf
+
+            <h1 class="title mb-3">Register</h1>
 
             <!-- Name -->
             <div class="mb-3">

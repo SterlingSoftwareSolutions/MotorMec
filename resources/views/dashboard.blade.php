@@ -13,21 +13,27 @@
         @if (Auth::guest())
             <h1 class="title">{{$auth->user->role}} Dashboard</h1>
         @else
-            <form class="w-50 mx-auto p-4 shadow mt-4 rounded" method="post" action="/logout">
-                @csrf
+            <div class="mx-auto p-4 mt-4 rounded shadow">
+
                 <h1 class="title mb-4">{{ucwords(Auth::user()->role)}} Dashboard</h1>
 
-                <!-- Submit -->
                 <div class="row mx-auto justify-content-between">
+
+                    <!-- Profile Button -->
                     <div class="col-auto p-0">
                         <a href="/profile">
                             <button type="button" class="btn btn-primary" >Profile</button>
                         </a>
                     </div>
-                    <div class="col-auto p-0">
-                        <button type="submit" class="btn btn-danger">Logout</button>
-                    </div>
+
+                    <!-- Logout Button -->
+                    <form class="col-auto p-0" method="post" action="/logout">
+                        @csrf
+                        <button type="submit" class="btn btn-danger ms-auto">Logout</button>
+                    </form>
+
                 </div>
+
             </form>
         @endif
     </div>

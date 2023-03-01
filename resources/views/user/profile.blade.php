@@ -11,10 +11,11 @@
 <body>
     <div class="container">
         @if (Auth::guest())
-            <h1 class="title">{{$auth->user->role}} Dashboard</h1>
+            <h1 class="title">You are not logged in</h1>
         @else
-            <form class="w-50 mx-auto p-4 shadow mt-4 rounded">
+            <form class="mx-auto p-4 shadow mt-4 rounded" method="post" action="users/{{Auth::user()->id}}">
                 @csrf
+                @method('put')
                 <h1 class="title mb-3">{{ucwords(Auth::user()->name)}}'s Profile</h1>
                 <div class="table mb-3">
 
@@ -22,6 +23,12 @@
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{Auth::user()->name}}">
+                    </div>
+
+                    <!-- Role -->
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Role</label>
+                        <input type="text" class="form-control" id="role" name="role" value="{{Auth::user()->role}}">
                     </div>
 
                     <!-- Business Name -->
@@ -54,11 +61,10 @@
                         <input type="text" class="form-control" id="phone" name="phone"  value="{{Auth::user()->phone}}">
                     </div>
 
-
                     <!-- Password -->
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Unchanged">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Unchanged" disabled>
                     </div>
                 </div>
 
@@ -70,7 +76,14 @@
                         </a>
                     </div>
                     <div class="col-auto p-0">
-                        <button type="submit" class="btn btn-success" disabled>Save</button>
+                        <form method="post" action="users/{{Auth::user()->id}}">
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Delete Account</button>
+                        </form>
+                    </div>
+
+                    <div class="col-auto p-0">
+                        <button type="submit" class="btn btn-success">Save</button>
                     </div>
                 </div>
 

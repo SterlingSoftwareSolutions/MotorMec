@@ -9,25 +9,35 @@
 
 <body>
     <div class="container">
-        <form class="w-50 mx-auto p-4 shadow mt-4 rounded" method="post" action="">
+        <form class="mx-auto p-4 shadow mt-4 rounded" method="post" action="">
             @csrf
+            
+            <h1 class="title mb-3">Login</h1>
 
             <!-- Username -->
             <div class="mb-3">
                 <label for="username" class="form-label">Username, Email or Phone</label>
                 <input type="text" class="form-control" id="username" name="username">
+                @error('username')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                @enderror
             </div>
-
 
             <!-- Password -->
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password">
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                @enderror
             </div>
 
             <!-- Errors -->
             <x-input-error :messages="$errors->all()" class="mt-2" />
-
 
             <!-- Submit -->
             <div class="row mx-auto justify-content-between">
