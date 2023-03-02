@@ -6,26 +6,35 @@
     <form action="app-form">
         <!-- progressbar -->
         <div class="progressBar">
-        <h4 class="title text-center">New Application</h4>
+            <h4 class="title text-center">New Application</h4>
         </div>
         <!-- form1 -->
         <div class="form-step form-step-active form1">
             <div class="field field1">
                 <h5>Approval Type</h5>
                 <div class="input-group radio">
-                    <input type="radio" id="approval1" name="approval" value="1">
-                    <label for="approval1">SEV's Entry / RAW's Modification</label><br>
-                    <input type="radio" id="approval2" name="approval" value="2">
-                    <label for="approval2">SEV's Entry / RAW's Modification</label><br>
+                    <div class="col-md-6">
+                        <input type="radio" id="approval1" name="approval" value="1">
+                        <label for="approval1">SEV's Entry / RAW's Modification</label><br>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="radio" id="approval2" name="approval" value="2">
+                        <label for="approval2">SEV's Entry / RAW's Modification</label><br>
+                    </div>
+
                 </div>
             </div>
             <div class="field field2">
                 <h5>VASS Engineering</h5>
                 <div class="input-group radio">
-                    <input type="radio" id="vass1" name="vass" value="1">
-                    <label for="vass1">MotorMec Engineering </label><br>
-                    <input type="radio" id="vass2" name="vass" value="2">
-                    <label for="vass2">Own Engineering</label><br>
+                    <div class="col-md-6">
+                        <input type="radio" id="vass1" name="vass" value="1">
+                        <label for="vass1">MotorMec Engineering </label><br>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="radio" id="vass2" name="vass" value="2">
+                        <label for="vass2">Own Engineering</label><br>
+                    </div>
                 </div>
             </div>
             <h4 class="title">Vehicle Information</h4>
@@ -103,8 +112,8 @@
                     </select>
                 </div>
                 <div class="space-even">
-                <label for="">Seating Placement*</label>
-                <button style="border: 1px solid black; padding:3px;">Add seating row</button>
+                    <label for="">Seating Placement*</label>
+                    <button style="border: 1px solid black; padding:3px;">Add seating row</button>
                 </div>
                 <div class="col-10 input">
                     <label for="driveType">Seat row 1</label>
@@ -118,21 +127,25 @@
             </div>
         </div>
         <!-- form2 -->
+
+        <!--  -->
         <div class="form-step form-step-active form2">
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="upload_file" name="engine">
-                    <span class="title">Uplaod Image</span>
+                    <input type="file" id="file1" onchange="previewImage(this, 'preview1', 'remove1')" multiple>
+                    <div id="preview1"></div>
+                    <span class="title">Uplaod Images</span>
                 </div>
-                <div class="uploading"></div>
-                <div class="success"></div>
-
-                <div class="error_msg"></div>
-                <div class="view" id="uploaded_view">
-                    <span class="file_remove">X</span>
-                </div>
+                <button type="button" id="remove1" onclick="removeImage('preview1', 'remove1')" style="display:none">X</button>
             </div>
-            
+            <div class="box">
+                <div class="btn_upload">
+                    <input type="file" id="file2" onchange="previewImage(this, 'preview2', 'remove2')" multiple>
+                    <div id="preview2"></div>
+                    <span class="title">Uplaod Images</span>
+                </div>
+                <button type="button" id="remove2" onclick="removeImage('preview2', 'remove2')" style="display:none">X</button>
+            </div>
         </div>
     </form>
 </div>

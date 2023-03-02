@@ -34,18 +34,13 @@ a{
     width: 100%;
 }
 
-.sidebar{
-    margin-left: -0px;
-    position: sticky !important;
-    top: 0;
-}
 
 ul{
     margin-top: 0 !important;
 }
 
 .navbar {
-    width: 300px !important;
+    width: 300px ;
     height: 100vh;
     position: fixed;
     margin-left: -0px;
@@ -109,8 +104,13 @@ a[aria-expanded="true"]{
 
   .dropdown-menu {
     padding: 0 !important;
-  }
+}
 
+.sidebar{
+    margin-left: -0px;
+    position: sticky !important;
+    top: 0;
+}
 
 
 .active-nav {
@@ -119,6 +119,27 @@ a[aria-expanded="true"]{
 
 .active-cont {
     margin-left: -300px;
+}
+
+@media only screen and (max-width: 576px){
+
+    .sidebar{
+        margin-left: -100vw;
+        position: sticky !important;
+        top: 0;
+    }
+    
+    .navbar{
+        width: 100vw;
+    }
+    
+    .active-nav {
+        margin-left: 300px;
+    }
+    
+    .active-cont {
+        margin-left: -0px;
+    }
 }
 
 .navbar .navbar-toggler{
@@ -168,6 +189,10 @@ a[aria-expanded="true"]{
 /* progress bar */
 .progressBar{
     position: relative;
+}
+
+.progress-step{
+    width: 2.1875rem;
 }
 
 
@@ -243,13 +268,43 @@ select{
     padding-left: 8px;
 }
 
+.form2{
+    position: relative;
+}
+
+.form-step{
+    border: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    overflow: hidden;
+}
+
 .box{
-    width: 40%;
+    position: relative;
+    width: 120px;
     margin: 5%;
     padding: 5px;
     border: 2px solid black;
 }
 
+.box button{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    color: #fff;
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    border: none;
+}
 .btn_upload{
     padding: 5px;
     color: #fff;
@@ -282,6 +337,10 @@ select{
     margin-top: -20px;
 }
 
+
+.btn_upload img{
+    width: 100px;
+}
 .uploading{
     position: absolute;
     left: 0;
@@ -316,8 +375,32 @@ select{
     top: 12px;
 }
 
+#imageContainer{
+    width: 200px;
+}
+
+#imageContainer img{
+    width: 100%;
+}
+
+#imageContainer button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background: red;
+    line-height: 30px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-size: x-large;
+}
+
 .view{
-    width: 300px;
+    width: 200px;
     margin: 40px auto;
     text-align: center;
     position: relative;
@@ -363,7 +446,7 @@ select{
     display: none;
 }
 
-.file_uploading .progress{
+.file_uploading .uploading{
     width: 100%;
 }
 
@@ -385,3 +468,97 @@ select{
 .view.show{
     opacity: 1;
 }
+
+/* ------------------ */
+.thumb-image {
+    float:left;
+    width:100px;
+    position:relative;
+    padding:5px;
+}
+#imagePreview {
+    width: 180px;
+    height: 180px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+}
+
+/* Code Pen Mulyipel Img */
+p {
+  margin: 0;
+}
+
+.upload__box {
+  padding: 40px;
+}
+.upload__inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload__btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  min-width: 116px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid;
+  background-color: #4045ba;
+  border-color: #4045ba;
+  border-radius: 10px;
+  line-height: 26px;
+  font-size: 14px;
+}
+.upload__btn:hover {
+  background-color: unset;
+  color: #4045ba;
+  transition: all 0.3s ease;
+}
+.upload__btn-box {
+  margin-bottom: 10px;
+}
+.upload__img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.upload__img-box {
+  width: 200px;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+.upload__img-close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  line-height: 24px;
+  z-index: 1;
+  cursor: pointer;
+}
+.upload__img-close:after {
+  content: "✖";
+  font-size: 14px;
+  color: white;
+}
+
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 100%;
+}
+/*  */

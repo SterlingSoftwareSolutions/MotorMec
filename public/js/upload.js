@@ -1,24 +1,47 @@
-var btnUpload = $("#upload_file"),
-box1 = $(".box");
-btnUpload.on("change",function(e){
-    var ext = btnUpload.val().split('.').pop().toLowerCase();
-    if($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1){
-        $(".error_msg").text("Not an Image");
-    }else{
-        $(".error_msg").text("");
-        box1.addClass("file_uploading");
-        setTimeout(function(){
-            box1.addClass("file_uploaded");
-        },3000);
-        var uploadedFile = URL.createObjectURL(e.target.files[0]);
-        setTimeout(function(){
-           $("#uploaded_view").append('<img src="' + uploadedFile + '" />').addClass("show")
-        }, 3500);
+
+
+// --------------------------------------------------------------------------------------------------------------------
+
+function previewImage(input, previewId, removeId) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      var preview = document.getElementById(previewId);
+      preview.innerHTML = '<img src="' + e.target.result + '">';
+      var removeBtn = document.getElementById(removeId);
+      removeBtn.style.display = 'inline-block';
     }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Function to remove the uploaded image
+function removeImage(previewId, removeId) {
+  var preview = document.getElementById(previewId);
+  preview.innerHTML = '';
+  var removeBtn = document.getElementById(removeId);
+  removeBtn.style.display = 'none';
+}
+
+
+
+// Handle form submission
+var form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect all uploaded files
+    var files = [];
+    var fileInputs = document.querySelectorAll("input[type=file]");
+    for (var i = 0; i < fileInputs.length; i++) {
+        var input = fileInputs[i];
+        for (var j = 0; j < input.files.length; j++) {
+            files.push(input.files[j]);
+        }
+    }
+
+    // Do something with the files, e.g. upload to a server
+    console.log(files);
 });
-$(".file_remove").on("click", function(e){
-    $("#uploaded_view").removeClass("show");
-    $("#uploaded_view").find("img").remove();
-    box1.removeClass("file_uploading");
-    box1.removeClass("file_uploaded");
-})
