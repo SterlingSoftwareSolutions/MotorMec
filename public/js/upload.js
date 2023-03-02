@@ -1,8 +1,8 @@
 
-
 // --------------------------------------------------------------------------------------------------------------------
 
-function previewImage(input, previewId, removeId) {
+// Function to preview the uploaded image
+function previewImage(input, previewId, removeId, uploadBtnId) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
@@ -11,6 +11,8 @@ function previewImage(input, previewId, removeId) {
       preview.innerHTML = '<img src="' + e.target.result + '">';
       var removeBtn = document.getElementById(removeId);
       removeBtn.style.display = 'inline-block';
+      var uploadBtn = document.getElementById(uploadBtnId);
+      uploadBtn.style.backgroundColor = 'white';
     }
 
     reader.readAsDataURL(input.files[0]);
@@ -18,11 +20,13 @@ function previewImage(input, previewId, removeId) {
 }
 
 // Function to remove the uploaded image
-function removeImage(previewId, removeId) {
+function removeImage(previewId, removeId, uploadBtnId) {
   var preview = document.getElementById(previewId);
   preview.innerHTML = '';
   var removeBtn = document.getElementById(removeId);
   removeBtn.style.display = 'none';
+  var uploadBtn = document.getElementById(uploadBtnId);
+  uploadBtn.style.backgroundColor = '';
 }
 
 

@@ -10,11 +10,15 @@ body{
 }
 
 .header-bar{
+    position: fixed;
+    top: 0px;
     height: 40px;
+    width: 100%;
     background-color: #57C590;
     color: white;
     transition: 0.4s;
     padding: 3px;
+    z-index: 3;
 }
 
 .header-bar a{
@@ -108,8 +112,8 @@ a[aria-expanded="true"]{
 
 .sidebar{
     margin-left: -0px;
-    position: sticky !important;
-    top: 0;
+    position: relative !important;
+    top: 40px;
 }
 
 
@@ -125,8 +129,6 @@ a[aria-expanded="true"]{
 
     .sidebar{
         margin-left: -100vw;
-        position: sticky !important;
-        top: 0;
     }
     
     .navbar{

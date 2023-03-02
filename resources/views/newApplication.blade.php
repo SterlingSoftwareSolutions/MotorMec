@@ -131,7 +131,7 @@
         <!--  -->
         <div class="form-step form-step-active form2">
             <div class="box">
-                <div class="btn_upload">
+                <div class="btn_upload" id="uploadBtn1">
                     <input type="file" id="file1" onchange="previewImage(this, 'preview1', 'remove1')" multiple>
                     <div id="preview1"></div>
                     <span class="title">Uplaod Images</span>
