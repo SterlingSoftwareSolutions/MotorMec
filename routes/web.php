@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\ClientDashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'auth'], function(){
+    Route::group(['middleware' => 'role:admin', 'prefix' => 'admin'], function(){
+        Route::get('dashboard', [AdminDashboardController::class, 'index'])
+        ->name('admin/dashboard');
+    });
+
+    Route::group(['middleware' => 'role:client'], function(){
+        Route::get('dashboard', [ClientDashboardController::class, 'index'])
+        ->name('dashboard');
+    });
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/view/{view}', function($view){
+    return view($view);
+});

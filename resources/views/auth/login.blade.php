@@ -1,73 +1,58 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<body>
+    <div class="container mr-0">
+        <div class="logo inline">
+            <img src="{{asset('images/logo.jpg')}}" alt=""> <h2>Motor Mec</h2>
+        </div> 
+        <form class="col-4 align-right" id="form" action="" method="post">
+            @csrf
+            <h2>Sign in</h2>
+            <h4>Login with Username, Email and Mobile Number & Password</h4>
+            <div class="input-control">
+                <input id="sign" name="sign" type="text" placeholder="User Name, Email or Mobile Number">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="error"></div>
+            </div>
+            <div class="inline d-flex justify-content-between">
+                <div class="agree row">
+                    <label for=""><input type="checkbox" name="" id=""> I have read the Terms of Use</label>
 
-                        <div class="row mb-3">
-                            <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Username/Email/Phone') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="string" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                </div>
+                <div class="forgot right">
+                    <p><a href="">Forgot Password?</a></p>
                 </div>
             </div>
-        </div>
+
+            <button type="submit ">log in</button>
+
+            <div class="sign-up d-flex justify-content-start">
+                <h6 class="mt-4">No Account? <a href="/register" style="color:#2B684C">Sign up</a> </h6>
+            </div>
+
+            <div class="copyright">
+                <h6>
+                    MotorMec <br>
+                    © 2023. All RIGHTS RESERVED
+                    <br>
+                <a href="">Terms of use</a> | <a href="">Privacy Policy</a>
+                </h6>
+            </div>
+        </form>
     </div>
-</div>
-@endsection
+</body>
+
+</html>
