@@ -6,7 +6,7 @@
     <form action="app-form"> 
     <h4 class="title text-center">New Application</h4>
 <div class="progressBar">
-    <div class="progresss" id="progress"></div>
+    <div class="progress" id="progress"></div>
     <div class="progress-step progress-step-active" data-title="CAR INFO"></div>
     <div class="progress-step" data-title="Supporting Documents"></div>
     <div class="progress-step" data-title="Payment"></div>
@@ -126,15 +126,15 @@
     </div>
     <div class="right">
         <button class="btn-save button">Save as Draft</button>
-        <button class="btn-next button">Next Page</button>
+        <button class="btn-next button" id="btn-back-to-top">Next Page</button>
     </div>
 </div>
 <!-- form2 -->
 
 <!--  -->
-<div class="form-step form-step-active form2">
+<div class="form-step form2">
     <div class="d-row">
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file1">Engine*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -148,7 +148,7 @@
                 <button type="button" id="remove1" onclick="removeImage('preview1', 'remove1', 'uploadBtn1')" style="display:none">X</button>
             </div>
         </div>
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file2">Chassis/ Frame Photo*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -165,7 +165,7 @@
     <h4 class="title">Exterior Images</h4>
     <div class="hr">&nbsp;</div>
     <div class="d-row">
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file3">Front Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -179,7 +179,7 @@
                 <button type="button" id="remove3" onclick="removeImage('preview3', 'remove3', 'uploadBtn3')" style="display:none">X</button>
             </div>
         </div>
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file4">Rear Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -192,7 +192,7 @@
                 <button type="button" id="remove4" onclick="removeImage('preview4', 'remove4', 'uploadBtn4')" style="display:none">X</button>
             </div>
         </div>
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file5">Rear Left Corner*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -206,7 +206,7 @@
                 <button type="button" id="remove5" onclick="removeImage('preview5', 'remove5', 'uploadBtn5')" style="display:none">X</button>
             </div>
         </div>
-        <div class="column">
+        <div class="column col-6 col-md-3">
             <label for="file6">Rear Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
@@ -285,13 +285,13 @@
         </div>
     </div>
     <button class="btn-prev button">Back</button>
-    <div class="right">
+    <div class="right" id="btn-back-to-top">
         <button class="btn-save button">Save as Draft</button>
-        <button class="btn-next button">Next Page</button>
+        <button class="btn-next button" id="btn-back-to-top">Next Page</button>
     </div>
 </div>
 <!-- form3 -->
-<div class="form-step form-step-active form3">
+<div class="form-step form3">
     
 </div>
 </form>
