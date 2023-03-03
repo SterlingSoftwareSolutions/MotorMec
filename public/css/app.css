@@ -10,7 +10,6 @@ body{
 }
 
 .header-bar{
-    position: fixed;
     top: 0px;
     height: 40px;
     width: 100%;
@@ -113,7 +112,6 @@ a[aria-expanded="true"]{
 .sidebar{
     margin-left: -0px;
     position: relative !important;
-    top: 40px;
 }
 
 
@@ -191,17 +189,56 @@ a[aria-expanded="true"]{
 /* progress bar */
 .progressBar{
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0rem 5rem 0rem;
+}
+
+.progressBar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #BEBEBE;
+    z-index: -1;
 }
 
 .progress-step{
     width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #BEBEBE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-step-active {
+    background-color: #2BB673;
+}
+
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+    color: white;
+}
+
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top:calc(100% + 0.75rem) ;
+    font-size: 0.85rem;
+    color: #666;
 }
 
 
 /* form 1 */
 
 .main-content{
-    padding: 20px 5% 2% 5%;
+    padding: 50px 5% 2% 5%;
     width: 100% !important;
 }
 
@@ -246,13 +283,13 @@ select{
     justify-content: space-between;
 }
 
-.savebtn{
+.btn-prev,.btn-save{
     padding: 7px;
     background-color: #3E3E3E;
     margin-right: 10px;
 }
 
-.nextbtn{
+.btn-next{
     padding: 7px;
     background-color: #57C590;
 }
@@ -283,10 +320,13 @@ select{
 
 .box{
     position: relative;
-    width: 120px;
+    width: 120px !important;
+    height: 100px;
     margin: 5%;
     padding: 5px;
-    border: 2px solid black;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
 
 .box button{
@@ -296,7 +336,7 @@ select{
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 10px;
-    left: 90px;
+    right: 5px;
     text-align: center;
     line-height: 24px;
     cursor: pointer;
@@ -307,6 +347,36 @@ select{
     z-index: 3;
     border: none;
 }
+
+.longBox{
+    position: relative;
+    width: 100% !important;
+    margin: 5%;
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.longBox button{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10px;
+    left: 84px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    color: #fff;
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    border: none;
+}
+
 .btn_upload{
     padding: 5px;
     color: #fff;
@@ -316,12 +386,9 @@ select{
     overflow: hidden;
     z-index: 3;
     white-space: nowrap;
-    background-color: #4B4B4B;
 }
 
-.btn_upload:hover{
-    transform: scale(1.05);
-}
+
 
 .btn_upload input{
     position: absolute;
@@ -333,15 +400,26 @@ select{
     opacity: 0;
 }
 
-.btn_upload .title{
+.btn_upload .upload-text{
     color: white;
     font-size: 12px;
     margin-top: -20px;
+    display: flex;
+    flex-direction: column;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
 
+.d-row{
+    display: flex;
+}
 .btn_upload img{
     width: 100px;
+    height: 80px;
 }
 .uploading{
     position: absolute;
@@ -563,4 +641,35 @@ p {
   position: relative;
   padding-bottom: 100%;
 }
-/*  */
+/* Multipe Images */
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-preview {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
+  
+  .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-preview .remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  
