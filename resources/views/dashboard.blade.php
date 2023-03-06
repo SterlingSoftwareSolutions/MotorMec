@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-
-<body>
-    <div class="container">
-        @if (Auth::guest())
-            <h1 class="title">{{$auth->user->role}} Dashboard</h1>
-        @else
-            <div class="mx-auto p-4 mt-4 rounded shadow">
-
-                <h1 class="title mb-4">{{ucwords(Auth::user()->role)}} Dashboard</h1>
-
-                <div class="row mx-auto justify-content-between">
-
-                    <!-- Profile Button -->
-                    <div class="col-auto p-0">
-                        <a href="/profile">
-                            <button type="button" class="btn btn-primary" >Profile</button>
-                        </a>
-                    </div>
-
-                    <!-- Logout Button -->
-                    <form class="col-auto p-0" method="post" action="/logout">
-                        @csrf
-                        <button type="submit" class="btn btn-danger ms-auto">Logout</button>
-                    </form>
-
-                </div>
-
-            </form>
-        @endif
-    </div>
-</body>
-
-</html>
+@extends('layouts.app')
+@include('sidebar')
+@include('header')
+@section('content')
+<h1>Dashboard Content</h1>
+@endsection

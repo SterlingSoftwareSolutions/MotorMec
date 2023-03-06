@@ -1,21 +1,21 @@
 body{
-    background-image: linear-gradient(to right, #F7A440, #D84A00);
+    background-image: url("../images/car.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif !important;
     display: flex;
     align-items: center;
+    min-height: 100vh;
 }
 
 .container{
-    float: left;
+    height: 100VH;
+    float: right;
     padding: 0 !important;
-    background: white;
     display: flex;
-    height: 550px;
-    margin-top: 7.5vh;
-    border-radius: 2em;
     line-height: 25px;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 .container img{
@@ -26,6 +26,25 @@ body{
     border-radius: 2em 0 0em 2em;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.logo img{ 
+    width: 50px;
+}
+
+.logo h2{
+    color: #2B684C;
+    margin: 5px;
+    font-weight: normal;
+    font-family: 'Poppins', sans-serif !important;
+}
+
 .container #form {
     width: 50%;
     padding: 8px;
@@ -33,16 +52,35 @@ body{
     font-size: 12px;
 }
 
+#form{
+    background-color: rgba(255, 255, 255, 0.90);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #form h2{
-    color: #E1701A;
-    font-size: 25px;
-    font-weight: bold;
+    color: #2B684C;
+    font-size: 35px;
+    font-weight: thin;
 }
 
 #form h4{
     color: black;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.inline{
+    display: flex;
+    width: 90%;
+}
+
+.right{
+    float:right;
 }
 
 .agree{
@@ -52,7 +90,7 @@ body{
 }
 
 .agree input[type=checkbox] {
-    accent-color: #E1701A;
+    accent-color: #2B684C;
     width: 18px;
     cursor: pointer;
   }
@@ -64,38 +102,44 @@ body{
 .forgot p a {
     color: inherit;
     text-decoration: none;
+    color: #2B684C;
 }
 
 .copyright{
     text-align: center;
+    margin-top: 20px;
 }
 
 .copyright h6{
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 
 #form button {
     padding: 10px;
     margin-top: 10px;
-    width: 60%;
+    width: 90%;
     color: white;
-    background-color: #E1701A;
+    background-color: #2B684C;
     border: none;
     border-radius: 0.5em;
     font-weight: bold;
     cursor: pointer;
 }
 
+.input-control{
+    width: 90%;
+}
+
 
 .input-control input{
+    width: 100% !important;
     border: none;
-    width: 70%;
-    background-color: #e1701a34;
-    border-radius: 0.5em;
+    background-color: inherit;
     padding: 10px;
     margin: 5px;
+    border-bottom: solid 1px black;
 }
 
 .input-control input:focus{
@@ -114,3 +158,17 @@ body{
     color: #ff3860;
     font-size: 9px;
 }
+
+.sign-up {
+    width: 90%;
+    
+}
+
+.sign-up h6 {
+    font-size: 12px !important;
+}
+
+.sign-up a{
+    text-decoration: underline;
+}
+
