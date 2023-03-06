@@ -615,9 +615,12 @@ select{
 /* userProfile */
 .user-profile-h{
     color:#2BB673;
-    font-size: 40px;
+    font-size: 30px;
 }
-/* ------------------ */
+.form-control:focus {
+    border-color: #ccc !important; /* Change the border color when clicked */
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.5) !important;
+  }
 .thumb-image {
     float:left;
     width:100px;
