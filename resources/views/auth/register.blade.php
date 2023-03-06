@@ -55,7 +55,7 @@
             <button type="submit ">Get Started</button>
 
             <div class="sign-up">
-                <h6 class="mt-4">Already have an Account? <a href="" style="color:#2B684C">login</a></h>
+                <h6 class="mt-4">Already have an Account? <a href="/login" style="color:#2B684C">login</a></h>
             </div>
 
             <div class="copyright">
