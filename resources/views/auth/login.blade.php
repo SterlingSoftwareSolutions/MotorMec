@@ -51,6 +51,23 @@
                 <a href="">Terms of use</a> | <a href="">Privacy Policy</a>
                 </h6>
             </div>
+
+            <!-- Errors -->
+            <x-input-error :messages="$errors->all()" class="mt-2" />
+
+            <!-- Submit -->
+            <div class="row mx-auto justify-content-between">
+                <div class="col-auto form-check my-auto">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="check">I accept the Terms of Use</label>
+                </div>
+                <div class="col-auto p-0">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+
+            <label class="form-label mt-3">Don't have an account? <a href="/register">Register</a></label>
+
         </form>
     </div>
 </body>
