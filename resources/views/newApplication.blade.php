@@ -6,17 +6,17 @@
     <form action="app-form">
         <h1 class="title">Create New Application</h1>
         <div class="progressBox">
-        <div class="progressBar">
-            <div class="progress" id="progress"></div>
-            <div class="progress-step progress-step-active" data-title="CAR INFO"></div>
-            <div class="progress-step" data-title="Supporting Documents"></div>
-            <div class="progress-step" data-title="Payment"></div>
-        </div>
+            <div class="progressBar">
+                <div class="progress" id="progress"></div>
+                <div class="progress-step progress-step-active" data-title="CAR INFO"></div>
+                <div class="progress-step" data-title="Supporting Documents"></div>
+                <div class="progress-step" data-title="Payment"></div>
+            </div>
         </div>
 
         <!-- form1 -->
         <div class="form-step form-step-active form1">
-        <h4 class="title text-center">New Application</h4>
+            <h4 class="title text-center">New Application</h4>
             <div class="field field1">
                 <h5>Approval Type</h5>
                 <div class="input-group radio row">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="space-even">
                     <label for="">Seating Placement*</label>
-                    <button  class="seating">Add seating row</button>
+                    <button class="seating">Add seating row</button>
                 </div>
                 <div class="col-10 input">
                     <label for="driveType">Seat row 1</label>
@@ -312,13 +312,13 @@
                         <label for="expireDate" class="col-12 col-md-6">
                             <h5>Expiry Date</h5>Enter the expiration date on the card
                         </label>
-                        <input type="date" class="col-12 col-md-5 m-2"  name="expireDate" id="">
+                        <input type="date" class="col-12 col-md-5 m-2" name="expireDate" id="">
                     </div>
                     <div class="col-12 mb-3 d-flex justify-content-between row">
                         <label for="expireDate" class="col-12 col-md-6">
                             <h5>Password</h5>Enter the Dynamic password
                         </label>
-                        <input type="password" class="col-12 col-md-5 m-2"  name="expireDate" id="">
+                        <input type="password" class="col-12 col-md-5 m-2" name="expireDate" id="">
                     </div>
                     <button type="submit" class="paybtn">Pay Now</button>
                 </div>
