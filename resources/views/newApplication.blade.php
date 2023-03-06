@@ -298,7 +298,7 @@
                     <label for="cardNumber">Enter the 16 digit card number on the road</label>
                     <div class="input-container">
                         <img src="{{asset('images/Mastercard-Logo.png')}}" class="icon1" alt="">
-                        <input style="width:100%; padding-left:20%;" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        <input style="width:100%; padding-left:25%;" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                         <img src="{{asset('images/verified.png')}}" class="icon2" alt="">
                     </div>
 
