@@ -284,15 +284,42 @@
             </div>
         </div>
     </div>
-    <button class="btn-prev button">Back</button>
-    <div class="right" id="btn-back-to-top">
+    <button class="btn-prev button" id="btn-back-to-top">Back</button>
+    <div class="right" >
         <button class="btn-save button">Save as Draft</button>
         <button class="btn-next button" id="btn-back-to-top">Next Page</button>
     </div>
 </div>
 <!-- form3 -->
 <div class="form-step form3">
-    
+    <div class="row">
+    <div class="col-9">
+    <h1 class="fw-bolder">Stripe</h1>
+    <h4>Card Number</h4>
+    <label for="cardNumber">Enter the 16 digit card number on the road</label>
+    <div class="col-12 mb-3 d-flex justify-content-between">
+        <input name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+    </div>
+    <div class="col-12 mb-3 d-flex justify-content-between">
+        <label for="cvv"><h5>CVV Number</h5>Enter the 3 or 4 digit number on the card</label>
+        <input name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" autocomplete="card-number" maxlength="4" placeholder="123">
+    </div>
+    <div class="col-12 mb-3 d-flex justify-content-between">
+    <label for="expireDate"><h5>Expiry Date</h5>Enter the expiration date on the card</label>
+    <input type="date" name="expireDate" id="">
+    </div>
+    <div class="col-12 mb-3 d-flex justify-content-between">
+    <label for="expireDate"><h5>Password</h5>Enter the Dynamic password</label>
+    <input type="password" name="expireDate" id="">
+    </div>
+    <button type="submit" class="paybtn">Pay Now</button>
+    </div>
+    <div class="col-3">
+        <div class="creditCard"></div>
+        <div class="creditDetail">   
+        </div>
+    </div>
+    </div>
 </div>
 </form>
 </div>

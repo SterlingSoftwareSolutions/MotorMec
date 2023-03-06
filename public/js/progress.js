@@ -2,7 +2,7 @@
 
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
-const progress = document.getElementById("progresss");
+const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step")
 
@@ -42,8 +42,13 @@ function updateProgessbar(){
         }else{
             progressStep.classList.remove('progress-step-active');
         }
-    })
+    });
+    
+    const progressActive = document.querySelectorAll(".progress-step-active");
+
+    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
+
 
 
 

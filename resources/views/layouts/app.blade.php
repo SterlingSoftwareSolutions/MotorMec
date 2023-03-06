@@ -30,9 +30,11 @@
         var menu_btn = document.querySelector("#menu-btn")
         var sidebar = document.querySelector(".sidebar")
         var container = document.querySelector(".header")
+        var mainContent = document.querySelector(".main-content")
         menu_btn.addEventListener("click", () => {
             sidebar.classList.toggle("active-nav")
             sidebar.classList.toggle("active-cont")
+            mainContent.classList.toggle("main-content-wide")
         })
     </script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
