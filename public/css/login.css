@@ -32,6 +32,8 @@ body{
     position: absolute;
     left: 15px;
     top: 15px;
+    z-index: 1;
+    text-transform: uppercase;
 }
 
 .logo img{ 
@@ -50,6 +52,7 @@ body{
     padding: 8px;
     text-align: center;
     font-size: 12px;
+    justify-content: space-evenly;
 }
 
 #form{
@@ -60,6 +63,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
+    height:fit-content;
 }
 
 #form h2{
@@ -129,7 +134,7 @@ body{
 }
 
 .input-control{
-    width: 90%;
+    width: 100%;
 }
 
 
@@ -160,8 +165,7 @@ body{
 }
 
 .sign-up {
-    width: 90%;
-    
+    width: 90%; 
 }
 
 .sign-up h6 {

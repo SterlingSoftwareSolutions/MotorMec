@@ -39,21 +39,13 @@ body {
     color: inherit;
 }
 
-h6 a {
-    color: inherit !important;
-}
-
-a {
-    color: inherit !important;
-}
-
 .content {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-ul {
+#navbarNav ul{
     margin-top: 0 !important;
 }
 
@@ -305,6 +297,16 @@ a[aria-expanded="true"] ul {
     background-color: #2BB673;
 }
 
+
+.progressBox{
+    width: 100%;
+    border: #2BB673 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.title{
+=======
 /* form 1 */
 
 h4.title {
@@ -318,10 +320,10 @@ h4.title {
 .hr {
     background: #2BB673;
     width: 100%;
-    position: relative;
-    margin-top: -24px;
-    height: 5px;
-    z-index: -1;
+    position:relative;
+    margin-top:-24px;
+    height:3px;
+    z-index:-1;
 }
 
 .input {
@@ -376,6 +378,11 @@ select {
     position: relative;
 }
 
+.form3 input{
+    height: 40px;
+}
+
+
 .form-step {
     display: none;
 }
@@ -383,7 +390,7 @@ select {
 .form-step-active {
     display: block;
     border: 1px solid black;
-    margin: 15px;
+    margin-top: 15px;
     padding: 10px;
     overflow: hidden;
     border-radius: .7rem;
@@ -455,7 +462,6 @@ select {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    z-index: 3;
     white-space: nowrap;
 }
 
@@ -640,9 +646,6 @@ select {
 }
 
 /* Code Pen Mulyipel Img */
-p {
-    margin: 0;
-}
 
 .upload__box {
     padding: 40px;
@@ -781,12 +784,12 @@ p {
 
 .creditCard {
     position: relative;
-    width: 80%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 15%;
     height: 40vh;
     border: #6E6E6E 1px solid;
     background-color: white;
-    z-index: 20;
+    z-index: 1;
     border-radius: 5px;
     padding: 20px 10px;
 }
@@ -797,9 +800,6 @@ p {
     position: relative;
 }
 
-.input-container input::placeholder {
-    text-align: center;
-}
 
 
 .input-container .icon1 {
@@ -820,6 +820,18 @@ p {
     transform: translateY(-50%);
 }
 
+
+.seating{
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid black; 
+    padding:3px;
+}
+
+
+
+  
+=======
 /* userProfile page styling */
 .user-profile-h {
     color: #2BB673;
