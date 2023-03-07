@@ -53,10 +53,14 @@ a {
     width: 100%;
 }
 
-
 ul {
     margin-top: 0 !important;
 }
+
+/* Sidebar Styling */
+
+
+  /* thaf  */
 
 .navbar {
     width: 300px;
@@ -73,29 +77,54 @@ ul {
     width: max-content !important;
 }
 
-
-
-.nav-item {
+/* .nav-item {
     width: 100%;
-}
+} */
 
 .nav-link {
     font-size: 1.25em !important;
     color: white !important;
-    width: 300px !important;
+    /* width: 300px !important; */
+    padding: 10px !important;
+    display: block !important;
+
 }
 
-.nav-link:active,
-.nav-link:focus,
 .nav-link:hover {
-    background-color: black;
+    color: #4B4B4B !important ;
+    background: #fff;
+    border-radius: 10px;
 }
 
-.sidebar-dropdown-menu {
+/* .nav-link:active,
+.nav-link:focus {
+    background-color: black;
+} */
+
+.dropdown-menu li {
+    margin-bottom: 0;
+  }
+
+.dropdown-menu li:hover a {
+    background-color: white;
+    border-radius: 0;
+    padding: 10px;
+  }
+  
+
+  
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #57C590;
+    border-radius: 10px;
+}
+
+/* .sidebar-dropdown-menu {
     background-color: #4B4B4B !important;
     width: 300px;
     border: none !important;
-}
+} */
 
 .dropdown-item {
     background-color: #324D40 !important;
