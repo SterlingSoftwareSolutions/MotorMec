@@ -455,11 +455,9 @@ select {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    z-index: 3;
+    z-index: 1;
     white-space: nowrap;
 }
-
-
 
 .btn_upload input {
     position: absolute;
