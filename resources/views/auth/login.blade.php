@@ -17,26 +17,36 @@
         </div> 
         <form class="col-4 align-right" id="form" action="" method="post">
             @csrf
+
             <h2>Sign in</h2>
             <h4>Login with Username, Email and Mobile Number & Password</h4>
+
+            {{-- Username/Email/Phone --}}
             <div class="input-control">
-                <input id="sign" name="sign" type="text" placeholder="User Name, Email or Mobile Number">
-                <div class="error"></div>
+                <input id="username" name="username" type="text" placeholder="User Name, Email or Mobile Number">
+                @error('username')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
+
+            {{-- Password --}}
             <div class="input-control">
                 <input type="password" name="password" id="password" placeholder="Password">
-                <div class="error"></div>
+                @error('password')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
+
             <div class="inline d-flex justify-content-between">
                 <div class="agree row">
                     <label for=""><input type="checkbox" name="" id=""> I have read the Terms of Use</label>
-
                 </div>
                 <div class="forgot right">
                     <p><a href="">Forgot Password?</a></p>
                 </div>
             </div>
 
+            <!-- Submit -->
             <button type="submit ">log in</button>
 
             <div class="sign-up d-flex justify-content-start">
@@ -52,10 +62,6 @@
                 </h6>
             </div>
 
-            <!-- Errors -->
-            <x-input-error :messages="$errors->all()" class="mt-2" />
-
-            <!-- Submit -->
             <div class="row mx-auto justify-content-between">
                 <div class="col-auto form-check my-auto">
                     <input type="checkbox" class="form-check-input" id="check">
