@@ -16,11 +16,11 @@
             <div class="field field1">
                 <h5>Approval Type</h5>
                 <div class="input-group radio">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <input type="radio" id="approval1" name="approval" value="1">
                         <label for="approval1">SEV's Entry / RAW's Modification</label><br>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <input type="radio" id="approval2" name="approval" value="2">
                         <label for="approval2">SEV's Entry / RAW's Modification</label><br>
                     </div>
@@ -30,11 +30,11 @@
             <div class="field field2">
                 <h5>VASS Engineering</h5>
                 <div class="input-group radio">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <input type="radio" id="vass1" name="vass" value="1">
                         <label for="vass1">MotorMec Engineering </label><br>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <input type="radio" id="vass2" name="vass" value="2">
                         <label for="vass2">Own Engineering</label><br>
                     </div>
@@ -43,15 +43,15 @@
             <h4 class="title">Vehicle Information</h4>
             <div class="hr">&nbsp;</div>
             <div class="row mt-3 vehi-info">
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="Chassis">Chassis/Frame Number*</label>
                     <input type="text" id="Chassis" name="Chassis" class="form-control">
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="arrival-date">Estimated date of arrival*</label>
                     <input type="date" id="arrival-date" name="arrival-date" class="form-control">
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="make">Make*</label>
                     <select id="make" name="make">
                         <option value="volvo">Select</option>
@@ -60,7 +60,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="model">Model*</label>
                     <select id="model" name="model">
                         <option value="volvo">Select</option>
@@ -69,7 +69,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="buildDate">Bulid date*</label>
                     <select id="buildDate" name="buildDate">
                         <option value="volvo">Select</option>
@@ -78,7 +78,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="fuelType">Fuel Type*</label>
                     <select id="fuelType" name="fuelType">
                         <option value="volvo">Select</option>
@@ -87,7 +87,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="transmission">Transmission*</label>
                     <select id="transmission" name="transmission">
                         <option value="volvo">Select</option>
@@ -96,7 +96,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="bodyType">Body Type*</label>
                     <select id="bodyType" name="bodyType">
                         <option value="volvo">Select</option>
@@ -105,7 +105,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-6 input">
+                <div class="col-12 col-md-5 input">
                     <label for="driveType">Drive Type*</label>
                     <select id="driveType" name="driveType">
                         <option value="volvo">Select</option>
@@ -133,9 +133,9 @@
 
         <!--  -->
         <div class="form-step form2">
-            <div class="d-row">
-                <div class="column col-6 col-md-3">
-                    <label for="file1">Engine*</label>
+            <div class="d-row row mt-3">
+                <div class="column col-5 col-md-3">
+                    <label for="file1">Engine Photo*</label>
                     <div class="box">
                         <div class="btn_upload">
                             <input type="file" id="file1" onchange="previewImage(this, 'preview1', 'remove1', 'uploadBtn1')" multiple>
@@ -148,7 +148,7 @@
                         <button type="button" id="remove1" onclick="removeImage('preview1', 'remove1', 'uploadBtn1')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-6 col-md-3">
+                <div class="column col-5 col-md-3">
                     <label for="file2">Chassis/ Frame Photo*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -164,8 +164,8 @@
             </div>
             <h4 class="title">Exterior Images</h4>
             <div class="hr">&nbsp;</div>
-            <div class="d-row">
-                <div class="column col-6 col-md-3">
+            <div class="d-row mt-3">
+                <div class="column col-5 col-md-3">
                     <label for="file3">Front Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -179,7 +179,7 @@
                         <button type="button" id="remove3" onclick="removeImage('preview3', 'remove3', 'uploadBtn3')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-6 col-md-3">
+                <div class="column col-5 col-md-3">
                     <label for="file4">Rear Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -192,7 +192,7 @@
                         <button type="button" id="remove4" onclick="removeImage('preview4', 'remove4', 'uploadBtn4')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-6 col-md-3">
+                <div class="column col-5 col-md-3">
                     <label for="file5">Rear Left Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -206,7 +206,7 @@
                         <button type="button" id="remove5" onclick="removeImage('preview5', 'remove5', 'uploadBtn5')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-6 col-md-3">
+                <div class="column col-5 col-md-3">
                     <label for="file6">Rear Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -224,7 +224,7 @@
             <div class="hr">&nbsp;</div>
             <div class="column">
                 <label for="file">Please add at least 4 clear photos</label>
-                <div class="d-row">
+                <div class="d-row mt-3">
                     <div class="longBox">
                         <div id="image-container"></div>
                     </div>
@@ -241,8 +241,8 @@
             </div>
             <h4 class="title">Documents</h4>
             <div class="hr">&nbsp;</div>
-            <div class="d-row">
-                <div class="column">
+            <div class="d-row row mt-3">
+                <div class="column col-5 col-md-3">
                     <label for="file7">Front Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -256,7 +256,7 @@
                         <button type="button" id="remove7" onclick="removeImage('preview7', 'remove7', 'uploadBtn7')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column col-5 col-md-3">
                     <label for="file8">Rear Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -269,7 +269,7 @@
                         <button type="button" id="remove8" onclick="removeImage('preview8', 'remove8', 'uploadBtn8')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column col-5 col-md-3">
                     <label for="file9">Rear Left Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
