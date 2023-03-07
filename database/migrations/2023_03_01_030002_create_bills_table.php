@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
             $table->foreignId('application_id')->constrained()->cascadeOnDelete();
-            $table->string('name')->unique()->nullable();
-            $table->string('amount_total')->unique()->nullable();
-            $table->string('amount_paid')->unique()->nullable();
+            $table->string('name')->nullable();
+            $table->string('amount_total')->nullable();
+            $table->string('amount_paid')->nullable();
             $table->timestamps();
         });
     }

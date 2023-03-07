@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('application_id')->constrained()->cascadeOnDelete();
             $table->foreignId('asset_type_id')->constrained()->cascadeOnDelete();
-            $table->string('location')->nullable();
+            $table->string('location')->unique()->nullable();
             $table->timestamps();
         });
     }
