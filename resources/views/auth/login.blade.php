@@ -15,8 +15,9 @@
         <div class="logo inline">
             <img src="{{asset('images/logo.jpg')}}" alt=""> <h2>Motor Mec</h2>
         </div> 
-        <form class="col-12 col-md-4 offset-md-3" id="form" action="" method="post">
-            <h2>Log in</h2>
+        <form class="col-4 align-right" id="form" action="" method="post">
+            @csrf
+            <h2>Sign in</h2>
             <h4>Login with Username, Email and Mobile Number & Password</h4>
             <div class="input-control">
                 <input id="sign" name="sign" type="text" placeholder="User Name, Email or Mobile Number">
@@ -29,13 +30,14 @@
             <div class="inline d-flex justify-content-between">
                 <div class="agree row">
                     <label for=""><input type="checkbox" name="" id=""> I have read the Terms of Use</label>
+
                 </div>
                 <div class="forgot right">
                     <p><a href="">Forgot Password?</a></p>
                 </div>
             </div>
 
-            <button type="submit ">Login</button>
+            <button type="submit ">log in</button>
 
             <div class="sign-up d-flex justify-content-start">
                 <h6 class="mt-4">No Account? <a href="/register" style="color:#2B684C">Sign up</a> </h6>

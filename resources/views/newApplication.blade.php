@@ -4,27 +4,23 @@
 @section('content')
 <div class="application">
     <form action="app-form">
-        <h1 class="title">Create New Application</h1>
-        <div class="progressBox">
-            <div class="progressBar">
-                <div class="progress" id="progress"></div>
-                <div class="progress-step progress-step-active" data-title="CAR INFO"></div>
-                <div class="progress-step" data-title="Supporting Documents"></div>
-                <div class="progress-step" data-title="Payment"></div>
-            </div>
+        <h4 class="title text-center">New Application</h4>
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="CAR INFO"></div>
+            <div class="progress-step" data-title="Supporting Documents"></div>
+            <div class="progress-step" data-title="Payment"></div>
         </div>
-
         <!-- form1 -->
         <div class="form-step form-step-active form1">
-            <h4 class="title text-center">New Application</h4>
             <div class="field field1">
                 <h5>Approval Type</h5>
-                <div class="input-group radio row">
-                    <div class="col-md-6 d-flex">
+                <div class="input-group radio">
+                    <div class="col-md-6">
                         <input type="radio" id="approval1" name="approval" value="1">
                         <label for="approval1">SEV's Entry / RAW's Modification</label><br>
                     </div>
-                    <div class="col-md-6 d-flex">
+                    <div class="col-md-6">
                         <input type="radio" id="approval2" name="approval" value="2">
                         <label for="approval2">SEV's Entry / RAW's Modification</label><br>
                     </div>
@@ -33,7 +29,7 @@
             </div>
             <div class="field field2">
                 <h5>VASS Engineering</h5>
-                <div class="input-group radio row">
+                <div class="input-group radio">
                     <div class="col-md-6">
                         <input type="radio" id="vass1" name="vass" value="1">
                         <label for="vass1">MotorMec Engineering </label><br>
@@ -75,7 +71,12 @@
                 </div>
                 <div class="col-12 col-md-6 input">
                     <label for="buildDate">Bulid date*</label>
-                    <input type="date" name="" id="">
+                    <select id="buildDate" name="buildDate">
+                        <option value="volvo">Select</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
                 </div>
                 <div class="col-12 col-md-6 input">
                     <label for="fuelType">Fuel Type*</label>
@@ -115,7 +116,7 @@
                 </div>
                 <div class="space-even">
                     <label for="">Seating Placement*</label>
-                    <button class="seating">Add seating row</button>
+                    <button style="border: 1px solid black; padding:3px;">Add seating row</button>
                 </div>
                 <div class="col-10 input">
                     <label for="driveType">Seat row 1</label>
@@ -132,8 +133,8 @@
 
         <!--  -->
         <div class="form-step form2">
-            <div class="d-row row">
-                <div class="column col-5 col-md-3">
+            <div class="d-row">
+                <div class="column col-6 col-md-3">
                     <label for="file1">Engine*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -147,7 +148,7 @@
                         <button type="button" id="remove1" onclick="removeImage('preview1', 'remove1', 'uploadBtn1')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-5 col-md-3">
+                <div class="column col-6 col-md-3">
                     <label for="file2">Chassis/ Frame Photo*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -163,8 +164,8 @@
             </div>
             <h4 class="title">Exterior Images</h4>
             <div class="hr">&nbsp;</div>
-            <div class="d-row row mt-3">
-                <div class="column col-5 col-md-3">
+            <div class="d-row">
+                <div class="column col-6 col-md-3">
                     <label for="file3">Front Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -178,7 +179,7 @@
                         <button type="button" id="remove3" onclick="removeImage('preview3', 'remove3', 'uploadBtn3')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-5 col-md-3">
+                <div class="column col-6 col-md-3">
                     <label for="file4">Rear Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -191,7 +192,7 @@
                         <button type="button" id="remove4" onclick="removeImage('preview4', 'remove4', 'uploadBtn4')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-5 col-md-3">
+                <div class="column col-6 col-md-3">
                     <label for="file5">Rear Left Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -205,7 +206,7 @@
                         <button type="button" id="remove5" onclick="removeImage('preview5', 'remove5', 'uploadBtn5')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-5 col-md-3">
+                <div class="column col-6 col-md-3">
                     <label for="file6">Rear Right Corner*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -298,27 +299,27 @@
                     <label for="cardNumber">Enter the 16 digit card number on the road</label>
                     <div class="input-container">
                         <img src="{{asset('images/Mastercard-Logo.png')}}" class="icon1" alt="">
-                        <input style="width:100%; padding-left:25%;" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        <input style="width:100%;" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="card-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                         <img src="{{asset('images/verified.png')}}" class="icon2" alt="">
                     </div>
 
-                    <div class="col-12 mt-3 mb-3 d-flex justify-content-between row">
-                        <label for="cvv" class="col-12 col-md-6">
+                    <div class="col-12 mb-3 d-flex justify-content-between">
+                        <label for="cvv">
                             <h5>CVV Number</h5>Enter the 3 or 4 digit number on the card
                         </label>
-                        <input class="col-12 col-md-5 m-2" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" autocomplete="card-number" maxlength="4" placeholder="123">
+                        <input name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" autocomplete="card-number" maxlength="4" placeholder="123">
                     </div>
-                    <div class="col-12 mb-3 d-flex justify-content-between row">
-                        <label for="expireDate" class="col-12 col-md-6">
+                    <div class="col-12 mb-3 d-flex justify-content-between">
+                        <label for="expireDate">
                             <h5>Expiry Date</h5>Enter the expiration date on the card
                         </label>
-                        <input type="date" class="col-12 col-md-5 m-2" name="expireDate" id="">
+                        <input type="date" name="expireDate" id="">
                     </div>
-                    <div class="col-12 mb-3 d-flex justify-content-between row">
-                        <label for="expireDate" class="col-12 col-md-6">
+                    <div class="col-12 mb-3 d-flex justify-content-between">
+                        <label for="expireDate">
                             <h5>Password</h5>Enter the Dynamic password
                         </label>
-                        <input type="password" class="col-12 col-md-5 m-2" name="expireDate" id="">
+                        <input type="password" name="expireDate" id="">
                     </div>
                     <button type="submit" class="paybtn">Pay Now</button>
                 </div>

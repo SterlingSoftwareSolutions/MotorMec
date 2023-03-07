@@ -17,9 +17,9 @@
             <img src="{{asset('images/logo.jpg')}}" alt="">
             <h2>Motor Mec</h2>
         </div>
-        <form class="col-12 col-md-4 offset-md-3" id="form" action="" method="post">
+        <form class="col-4 align-right m-0" id="form" action="{{route('register')}}" method="post">
             @csrf
-            <h2 class="mt-5"> Sign Up</h2>
+            <h2>Sign Up</h2>
             <div class="input-control">
                 <input id="name" name="name" type="text" placeholder="Name">
                 <div class="error"></div>
@@ -49,13 +49,10 @@
                 <input type="password" name="password2" id="password2" placeholder="Confirm Password">
                 <div class="error"></div>
             </div>
-            <div class="agree row">
-                <label for=""><input type="checkbox" name="" id=""> I have read the Terms of Use</label>
-            </div>
             <button type="submit ">Get Started</button>
 
             <div class="sign-up">
-                <h6 class="mt-4">Already have an Account? <a href="/login" style="color:#2B684C">login</a></h>
+                <h6 class="mt-4">Already have an Account? <a href="" style="color:#2B684C">login</a></h>
             </div>
 
             <div class="copyright">
