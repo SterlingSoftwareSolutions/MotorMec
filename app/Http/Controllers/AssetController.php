@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Compliance;
+use App\Models\Asset;
 use Illuminate\Http\Request;
 
-class ComplianceController extends Controller
+class AssetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ComplianceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Compliance  $compliance
+     * @param  \App\Models\Asset  $asset
      * @return \Illuminate\Http\Response
      */
-    public function show(Compliance $compliance)
+    public function show(Asset $asset)
     {
         //
     }
@@ -52,10 +52,10 @@ class ComplianceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Compliance  $compliance
+     * @param  \App\Models\Asset  $asset
      * @return \Illuminate\Http\Response
      */
-    public function edit(Compliance $compliance)
+    public function edit(Asset $asset)
     {
         //
     }
@@ -64,10 +64,10 @@ class ComplianceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Compliance  $compliance
+     * @param  \App\Models\Asset  $asset
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Compliance $compliance)
+    public function update(Request $request, Asset $asset)
     {
         //
     }
@@ -75,10 +75,10 @@ class ComplianceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Compliance  $compliance
+     * @param  \App\Models\Asset  $asset
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Compliance $compliance)
+    public function destroy(Asset $asset)
     {
         //
     }
