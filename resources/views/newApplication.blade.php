@@ -359,4 +359,6 @@
         </div>
     </form>
 </div>
+<script src="{{ asset('js/upload.js') }}"></script>
+<script src="{{ asset('js/progress.js') }}"></script>
 @endsection
