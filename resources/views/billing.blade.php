@@ -11,10 +11,10 @@
 
 <div class="container">
     <div class="row billing-main">
-        <h1 class="col text-success my-5  text-start">Billing Information</h1>
+        <h1 class="col text-success my-5  text-start md-5">Billing Information</h1>
     </div>
 
-    <div class="row mt-3 d-flex ">
+    <div class="row">
         <div class="col-1 mt-2">
             <h6 class="status_class">Status</h6>
         </div>
@@ -47,39 +47,40 @@
 
     <div class="row table-heading fs-7 ">
         <div class="col-lg-1 col-2">Photo</div>
-        <div class="col-lg-2 col-4">Application ID</div>
-        <div class="col-lg-1 col-4">Car</div>
-        <div class="col-lg-2 col-2">Total Value</div>
-        <div class="col-lg-2 col-2">Paid Amount</div>
-        <div class="col-lg-1 col-2">Remain Amount</div>
-
+        <div class="col-lg-2 col-4 ms-4">Application ID</div>
+        <div class="col-lg-1 col-4 ms-4">Car</div>
+        <div class="col-lg-2 col-4 ms-3 ">Total Value</div>
+        <div class="col-lg-2 col-2 ms-4">Paid Amount</div>
+        <div class="col-lg-3 col-3">Remain Amount</div>
     </div>
+  
+
     <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
-        <div class="col-2 p-0 image-cart">
+        <div class="col-1 p-0 image-cart">
             <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
         <div class="col-2 my-auto col app-id">
-    <p class="text-start">S1047</p>
-</div>
+            <p class="text-start px-4">S1047</p>
+        </div>
         <div class="col-1 my-auto car">
-            <p>BMW</p>
+            <p class="text-start px-4 ms-4">BMW</p>
         </div>
-        <div class="col-1 my-auto total-value">
-            <p>Aud 1800</p>
+        <div class="col-2 my-auto total-value">
+            <p class="text-start px-3 ms-5 ">Aud 1800</p>
         </div>
-        <div class="col-1 px-1 my-auto paid-amount">
-            <p>Aud 500</p>
+        <div class="col-2 px-1 my-auto paid-amount">
+            <p class="text-start  d-grid   justify-content-md-end  px-1 me-4 ">Aud 500</p>
         </div>
         <div class="col-2 my-auto remain-amount">
-            <p>Aud 1300</p>
+            <p class="text-start d-grid  justify-content-md-end px-1 me-4  ">Aud 1300</p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col my-auto">
             <div class="row status d-flex align-items-center">
-
-                <div class="col-auto my-auto payment-btn">
-                    <button type="button" class="btn btn-danger fs-6" id="paynow">
+                   
+ 
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                    <button type="button" class="btn btn-danger me-md-2 fs-6 " id="paynow">
                         <p>Pay now</p>
-
                     </button>
                 </div>
             </div>
@@ -88,60 +89,68 @@
 
 
 
-    <div class="row border border-dark rounded-3 mt-3 col-heading fs-7">
-        <div class="col-2 p-0 image-cart">
-            <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded ">
+    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
+        <div class="col-1 p-0 image-cart">
+            <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
-        <div class="col-2 my-auto px-5 app-id">
-            <p class="col">S1047</p>
+        <div class="col-2 my-auto col app-id">
+            <p class="text-start px-4">S1047</p>
         </div>
         <div class="col-1 my-auto car">
-            <p>BMW</p>
+            <p class="text-start px-4 ms-4">BMW</p>
         </div>
-        <div class="col-1 my-auto total-value">
-            <p>Aud 1800</p>
+        <div class="col-2 my-auto total-value">
+            <p class="text-start px-3 ms-5 ">Aud 1800</p>
         </div>
-        <div class="col-1 px-1 my-auto paid-amount">
-            <p>Aud 500</p>
+        <div class="col-2 px-1 my-auto paid-amount">
+            <p class="text-start  d-grid   justify-content-md-end  px-1 me-4 ">Aud 500</p>
         </div>
         <div class="col-2 my-auto remain-amount">
-            <p>Aud 1300</p>
+            <p class="text-start d-grid  justify-content-md-end px-1 me-4  ">Aud 1300</p>
         </div>
-        <div class="col-3 my-auto">
-            <div class="row status">
-                <div class="col-auto my-auto text-success fw-bold payment-method-success fs-6" id="paid">
+        <div class="col my-auto">
+            <div class="row status d-flex align-items-center">
+                   
+
+            <div class="col-3 my-auto">
+         
+                <div class="text-success fw-bold payment-method-success  fs-6 md-5 px-5 mt-4" id="paid">
                     <p>Paid</p>
                 </div>
+          
+        </div>
+ 
+             
             </div>
         </div>
     </div>
 
     <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
-        <div class="col-2 p-0 image-cart">
-            <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded ">
+        <div class="col-1 p-0 image-cart">
+            <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
-        <div class="col-2 my-auto px-5 app-id">
-            <p>S1047</p>
+        <div class="col-2 my-auto col app-id">
+            <p class="text-start px-4">S1047</p>
         </div>
         <div class="col-1 my-auto car">
-            <p>BMW</p>
+            <p class="text-start px-4 ms-4">BMW</p>
         </div>
-        <div class="col-1 my-auto total-value">
-            <p>Aud 1800</p>
+        <div class="col-2 my-auto total-value">
+            <p class="text-start px-3 ms-5 ">Aud 1800</p>
         </div>
-        <div class="col-1 px-1 my-auto paid-amount">
-            <p>Aud 500</p>
+        <div class="col-2 px-1 my-auto paid-amount">
+            <p class="text-start  d-grid   justify-content-md-end  px-1 me-4 ">Aud 500</p>
         </div>
         <div class="col-2 my-auto remain-amount">
-            <p>Aud 1300</p>
+            <p class="text-start d-grid  justify-content-md-end px-1 me-4  ">Aud 1300</p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col my-auto">
             <div class="row status d-flex align-items-center">
-
-                <div class="col-auto my-auto payment-btn">
-                    <button type="button" class="btn btn-danger fs-6" id="paynow">
+                   
+ 
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                    <button type="button" class="btn btn-danger me-md-2 fs-6 " id="paynow">
                         <p>Pay now</p>
-
                     </button>
                 </div>
             </div>
