@@ -103,12 +103,21 @@ ul {
 
 .dropdown-menu li {
     margin-bottom: 0;
-  }
+}
+
 
   .navbar-expand-sm .navbar-nav .dropdown-menu{
     position: relative !important;
   }
   
+
+.dropdown-menu li:hover a {
+    background-color: white;
+    border-radius: 0;
+    padding: 10px;
+}
+
+
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
@@ -813,7 +822,6 @@ select {
 }
 /*-- userProfile page styling-- */
 
-
 /* review application page */
 
 .textbox {
@@ -849,4 +857,36 @@ select {
   .textbox.active .icon {
     background-image: url('icon-active.png');
   }
-  
+
+/* all application  */
+.dropdown-select {
+    height: 30px !important;
+    border: 1px solid #57C590 !important;
+}
+
+.filter {
+    border: 1px solid #57C590 !important;
+}
+
+.title-form {
+    color: #57C590 !important;
+}
+
+.table-row {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.draft-btn {
+    width: 50%;
+}
+.view-btn{
+    width: 90%;
+}
+.sub-topics{
+    font-size: 1.5vh;
+}
+.t-body{
+    height: fit-content;
+    max-height: 100vh;
+}

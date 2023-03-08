@@ -12,9 +12,14 @@
         <img src="{{asset('images/profile.png')}}" alt="">
       </button>
       <ul class="dropdown-menu profile-menu" aria-labelledby="dropdownMenu2">
-        <li><button class="dropdown-item profile-btn" type="button">Profile</button></li>
-        <li><button class="dropdown-item profile-btn" type="button">Billing</button></li>
-        <li><button class="dropdown-item logout-btn" type="button">Logout</button></li>
+        <li><a href="/profile" class="dropdown-item profile-btn">Profile</a></li>
+        <li><a href="/billing" class="dropdown-item profile-btn">Billing</a></li>
+        <li>
+          <form action="{{url('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="dropdown-item logout-btn">Logout</button>
+          </form>
+        </li>
       </ul>
     </div>
   </div>
