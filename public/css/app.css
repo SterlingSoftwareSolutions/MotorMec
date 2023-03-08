@@ -29,10 +29,12 @@ body {
     padding: 50px 5% 2% 5%;
     width: 100% !important;
     margin-left: 300px;
+    transition: width 0.3s ease-in-out !important;
 }
 
 .main-content-wide {
     margin-left: 0;
+    transition: width 0.9s ease-in-out;
 }
 
 .header-bar a {
@@ -57,11 +59,6 @@ ul {
     margin-top: 0 !important;
 }
 
-/* Sidebar Styling */
-
-
-/* thaf  */
-
 .navbar {
     width: 300px;
     height: 100vh;
@@ -77,17 +74,12 @@ ul {
     width: max-content !important;
 }
 
-/* .nav-item {
-    width: 100%;
-} */
 
 .nav-link {
-    font-size: 1.25em !important;
+    font-size: 1.20em !important;
     color: white !important;
-    /* width: 300px !important; */
     padding: 10px !important;
     display: block !important;
-
 }
 
 .nav-link:hover {
@@ -96,21 +88,34 @@ ul {
     border-radius: 10px;
 }
 
-/* .nav-link:active,
-.nav-link:focus {
-    background-color: black;
-} */
+.nav-item {
+    border-radius: 5px;
+    background-color: #3D403E;
+    margin-bottom: 5px;
+  }
+  
+
+
+.dropdown-menu{
+    padding: 0 !important;
+    width: 100%;
+}
 
 .dropdown-menu li {
     margin-bottom: 0;
 }
+
+
+  .navbar-expand-sm .navbar-nav .dropdown-menu{
+    position: relative !important;
+  }
+  
 
 .dropdown-menu li:hover a {
     background-color: white;
     border-radius: 0;
     padding: 10px;
 }
-
 
 
 #sidebar ul li.active>a,
@@ -120,16 +125,13 @@ a[aria-expanded="true"] {
     border-radius: 10px;
 }
 
-/* .sidebar-dropdown-menu {
-    background-color: #4B4B4B !important;
-    width: 300px;
-    border: none !important;
-} */
-
 .dropdown-item {
-    background-color: #324D40 !important;
+    background-color: #3D403E !important;
     color: white !important;
-    padding: 10px !important;
+}
+.dropdown-item:hover {
+    background-color: white !important;
+    color: #3D403E !important;
 }
 
 .sidebar-dropdown-item {
@@ -150,20 +152,13 @@ a[aria-expanded="true"] ul {
     background-color: black !important;
 }
 
-.dropdown-menu {
-    padding: 0 !important;
-}
-
 .sidebar {
     margin-top: 40px;
     margin-left: -0px;
     position: fixed !important;
+    transition: transform 0.3s ease-in-out; 
 }
 
-
-.active-nav {
-    margin-left: 0px;
-}
 
 .active-cont {
     margin-left: -300px;
@@ -189,6 +184,7 @@ a[aria-expanded="true"] ul {
 
     .main-content {
         margin-left: 0;
+        transition: width 0.3s ease-in-out;
     }
 
     .main-content-wide {
@@ -455,11 +451,9 @@ select {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    z-index: 3;
+    z-index: 1;
     white-space: nowrap;
 }
-
-
 
 .btn_upload input {
     position: absolute;
@@ -640,9 +634,6 @@ select {
 }
 
 /* Code Pen Mulyipel Img */
-p {
-    margin: 0;
-}
 
 .upload__box {
     padding: 40px;
@@ -831,6 +822,41 @@ p {
 }
 /*-- userProfile page styling-- */
 
+/* review application page */
+
+.textbox {
+    position: relative;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+    width: max-content;
+}
+
+.textbox p{
+ margin: 0;
+}
+  
+.textbox:hover {
+    border: 1px solid blue;
+}
+  
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('icon.png');
+    background-size: cover;
+  }
+  
+  .textbox.active {
+    border: 1px solid red;
+  }
+  
+  .textbox.active .icon {
+    background-image: url('icon-active.png');
+  }
 
 /* all application  */
 .dropdown-select {

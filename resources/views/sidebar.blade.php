@@ -3,25 +3,25 @@
   <div class="" id="navbarNav">
     <ul class="navbar-nav d-flex flex-column">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Dashboard</a>
+        <a class="nav-link" href="/"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/">Create New Application</a>
+        <a class="nav-link" href="/"><i class="fas fa-plus-circle"></i> Create New Application</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="applicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Applications
+          <i class="fas fa-folder-open"></i> Applications
         </a>
-        <ul class="dropdown-menu" aria-labelledby="applicationsDropdown">
-          <li><a class="dropdown-item" href="#">All</a></li>
-          <li><a class="dropdown-item" href="#">Completed</a></li>
-          <li><a class="dropdown-item" href="#">Pending</a></li>
-          <li><a class="dropdown-item" href="#">Rejected</a></li>
-          <li><a class="dropdown-item" href="#">Draft</a></li>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="applicationsDropdown">
+          <li><a class="dropdown-item" href="#"><i class="fas fa-list"></i> All</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fas fa-check-circle"></i> Completed</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fas fa-clock"></i> Pending</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fas fa-times-circle"></i> Rejected</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fas fa-pencil-alt"></i> Draft</a></li>
         </ul>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/">Billing</a>
+        <a class="nav-link" href="/"><i class="fas fa-money-bill-wave"></i> Billing</a>
       </li>
     </ul>
   </div>
