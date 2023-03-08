@@ -12,7 +12,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="applicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-folder-open"></i> Applications
         </a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="applicationsDropdown">
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="applicationsDropdown" id="application-stage">
           <li><a class="dropdown-item" href="#"><i class="fas fa-list"></i> All</a></li>
           <li><a class="dropdown-item" href="#"><i class="fas fa-check-circle"></i> Completed</a></li>
           <li><a class="dropdown-item" href="#"><i class="fas fa-clock"></i> Pending</a></li>
