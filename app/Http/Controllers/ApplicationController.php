@@ -15,7 +15,13 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        //
+
+
+        $parameteres = [
+            'applications' => Application::all(),
+        ];
+        //dd($parameteres);
+        return view('applications/index', $parameteres);
     }
 
     /**
@@ -25,26 +31,8 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        $fields = [
-            'user_id' => Auth::user()->id,
-            'application_date' => now(),
-            'status' => 'in_review',
-            'approval_type' => 'new',
-            'vass_engineering' => 'motormec',
-            'arrival_date' => '2024-04-04',
-            'chassis_no' => '131244',
-            'make' => 'Ferrari',
-            'model'=> 'Roma',
-            'build_date' => '2022-01-04',
-            'fuel_type' => 'petrol',
-            'transmission' => 'automatic',
-            'body_type' => 'coupe',
-            'drive_type' => 'awd',
-            'seats' => '1:2',
-            'additional_info' => 'none'
-        ];
+        return view('applications/create');
 
-        Application::create($fields);
     }
 
     /**

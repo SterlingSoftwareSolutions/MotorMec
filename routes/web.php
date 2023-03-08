@@ -17,25 +17,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::get('profile', function(){
+
+// Common Routes 
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+
+#TODO Remove This
+// testing purposes 
+Route::get('/view/{view}', function ($view) {
+    return view($view);
+});
+
+// All the routes for the logged in users 
+Route::group(['middleware' => 'auth'], function () {
+
+    // user profile 
+    Route::get('profile', function () {
         return view('userProfile');
     });
 
-    Route::resource('users', UserController::class);
-    Route::resource('applications', ApplicationController::class);
+    Route::get('create-application', [ApplicationController::class, 'create']);
 
-    Route::group(['middleware' => 'role:admin,superadmin', 'prefix' => 'admin'], function(){
+    Route::get('applications', [ApplicationController::class, 'index']);
+
+    Route::group(['middleware' => 'role:admin,superadmin', 'prefix' => 'admin'], function () {
         Route::get('dashboard', [AdminDashboardController::class, 'index']);
     });
 
-    Route::group(['middleware' => 'role:client'], function(){
+    Route::group(['middleware' => 'role:client'], function () {
         Route::get('dashboard', [ClientDashboardController::class, 'index']);
     });
-});
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-
-Route::get('/view/{view}', function($view){
-    return view($view);
 });
