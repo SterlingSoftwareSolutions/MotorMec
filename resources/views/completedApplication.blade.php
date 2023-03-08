@@ -20,9 +20,18 @@
             <div class="col-7"><h2>Application #123</h2></div>
         </div>
         
-      
-         
+        
         <div class="container">
+
+        <div class="border "> 
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-success me-md-2" type="button">Button</button>
+  <button class="btn btn-success" type="button">Button</button>
+</div>
+
+        </div>
+
+
       <div class="row border border-dark rounded mt-3">
            
         <div class="row mt-3">
