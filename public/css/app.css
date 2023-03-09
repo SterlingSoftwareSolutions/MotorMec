@@ -252,7 +252,7 @@ a[aria-expanded="true"] ul {
     counter-reset: step;
     margin: 2rem 0rem 5rem 0rem;
     border: 1px solid #2BB673;
-    padding: 7% 5% 7% 5%;
+    padding: 7% 0% 7% 0%;
 }
 
 .progressBar::before,
@@ -265,12 +265,14 @@ a[aria-expanded="true"] ul {
     width: 90%;
     background-color: #BEBEBE;
     z-index: -1;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .progress {
     background-color: #2BB673 !important;
     width: 0%;
-    margin-right: 0;
+    margin-right: 10%;
 }
 
 .progress-step {
@@ -281,6 +283,7 @@ a[aria-expanded="true"] ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5%;
 }
 
 
