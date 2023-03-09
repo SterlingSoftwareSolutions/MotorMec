@@ -238,6 +238,10 @@ a[aria-expanded="true"] ul {
     width: 20px;
 }
 
+#profile-dropdown{
+    z-index: 1000;
+}
+
 #profile-dropdown .logout-btn:hover{
     color: red !important;
 }
@@ -1040,3 +1044,129 @@ select {
 }
 
 /* Billing Css Ended  */
+
+  /* dashboard circular progress bar  */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container1 {
+    position: relative;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .container1 .card-name {
+    position: relative;
+    width: 259px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .container1 .card-name:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+  }
+  .container1 .card-name:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .03);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .card-name .box-name {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .card-name .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .card-name:hover .percent .number h2 span {
+    color: #fff;
+  }
+  .c-text {
+      inline-size: 90px;
+      overflow-wrap: break-word;
+      font-size: small;
+  }
+  .c-number {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+  }
+  svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    overflow: visible;
+  }
+  svg circle
+  {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    /* stroke: rgb(121, 117, 117); */
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+  }
+  svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transform: rotate(-89.9deg);
+    transform-origin: center;
+  }
+  .card-name:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke: #00a1ff;
+  }
+  .card-name:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+    stroke: #ff960d;
+  }
+  .card-name:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #57c590;
+  }
+  .card-name:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 25) / 100);
+    stroke: #ff3333;
+  }
+  .card-name:nth-child(5) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 25) / 100);
+    stroke: #737373;
+  }
