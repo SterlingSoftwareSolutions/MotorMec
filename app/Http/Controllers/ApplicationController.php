@@ -80,7 +80,6 @@ class ApplicationController extends Controller
         // Storing the values in the Session Since we need to acces within the other steps  
         // if we can find a better way to pass the values within forms need to implement 
         Session::put('new_application', $new_application);
-
         return redirect('create-application_2');
     }
 

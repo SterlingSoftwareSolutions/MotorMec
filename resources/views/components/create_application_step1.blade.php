@@ -5,13 +5,12 @@
         <div class="field field1">
             <h5>Approval Type</h5>
             <div class="input-group radio">
-
                 <div class="col-md-6">
-                    <input class="" type="radio" id="approvel" name="approvel" value="SEV">
+                    <input class="" type="radio" id="approvel" name="approvel" value="SEV" @if(old('approvel') == 'SEV') checked @endif>
                     <label class="ms-2" for="SEV">SEV's Entry / RAW's Modification</label><br>
                 </div>
                 <div class="col-md-6">
-                    <input type="radio" id="approvel" name="approvel" value="Older Vehicles">
+                    <input type="radio" id="approvel" name="approvel" value="Older Vehicles" @if(old('approvel') == 'Older Vehicles') checked @endif>
                     <label class="ms-2" for="older_vehicle">Vehicle is older than 25 years</label><br>
                 </div>
 
@@ -22,11 +21,11 @@
             <h5>VASS Engineering</h5>
             <div class="input-group radio">
                 <div class="col-md-6">
-                    <input type="radio" id="vass1" name="vass" value="MotorMec Engineering">
+                    <input type="radio" id="vass1" name="vass" value="MotorMec Engineering" @if(old('vass') == 'MotorMec Engineering') checked @endif>
                     <label class="ms-2" for="vass1">MotorMec Engineering </label><br>
                 </div>
                 <div class="col-md-6">
-                    <input type="radio" id="vass2" name="vass" value="Own Engineering">
+                    <input type="radio" id="vass2" name="vass" value="Own Engineering" @if(old('vass') == 'MotorMec Engineering') checked @endif>
                     <label class="ms-2" for="vass2">Own Engineering</label><br>
                 </div>
             </div>
@@ -50,9 +49,9 @@
                 <label for="make">Make*</label>
                 <select class="form-control" id="make" name="make">
                     <option disabled selected  value="volvo">Select</option>
-                    <option value="saab">Honda</option>
-                    <option value="fiat">Toyota</option>
-                    <option value="audi">Ford</option>
+                    <option value="saab" @if(old('make') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('make') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('make') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Model -->
@@ -60,24 +59,24 @@
                 <label for="model">Model*</label>
                 <select class="form-control" id="model" name="model">
                     <option disabled selected  value="volvo">Select</option>
-                    <option value="saab">Honda Civic</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                    <option value="saab" @if(old('model') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('model') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('model') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Build Date -->
             <div class="col-12 col-md-6 input">
                 <label for="buildDate">Bulid date*</label>
-                <input type="date" id="buildDate" name="buildDate" class="form-control">
+                <input value="{{ old('buildDate') }}" type="date" id="buildDate" name="buildDate" class="form-control">
             </div>
             <!-- Fuel Type -->
             <div class="col-12 col-md-6 input">
                 <label for="fuelType">Fuel Type*</label>
                 <select class="form-control" id="fuelType" name="fuelType">
                     <option disabled selected value="volvo">Select</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                    <option value="saab" @if(old('fuelType') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('fuelType') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('fuelType') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Transmission -->
@@ -85,9 +84,9 @@
                 <label for="transmission">Transmission*</label>
                 <select class="form-control" id="transmission" name="transmission">
                     <option  disabled selected value="volvo">Select</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                    <option value="saab" @if(old('transmission') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('transmission') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('transmission') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Body Type -->
@@ -95,9 +94,9 @@
                 <label for="bodyType">Body Type*</label>
                 <select class="form-control" id="bodyType" name="bodyType">
                     <option  disabled selected value="volvo">Select</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                    <option value="saab" @if(old('bodyType') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('bodyType') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('bodyType') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Drive Type -->
@@ -105,9 +104,9 @@
                 <label for="driveType">Drive Type*</label>
                 <select class="form-control" id="driveType" name="driveType">
                     <option  disabled selected value="volvo">Select</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                    <option value="saab" @if(old('driveType') == 'saab') selected @endif>Honda</option>
+                    <option value="fiat" @if(old('driveType') == 'fiat') selected @endif>Toyota</option>
+                    <option value="audi" @if(old('driveType') == 'audi') selected @endif>Ford</option>
                 </select>
             </div>
             <!-- Seating Rows  -->
