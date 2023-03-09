@@ -38,12 +38,12 @@
             <!-- Chassis number  -->
             <div class="col-12 col-md-6 input">
                 <label for="Chassis">Chassis/Frame Number*</label>
-                <input type="text" id="Chassis" name="chassis_no" class="form-control">
+                <input value="{{ old('chassis_no') }}" type="text" id="Chassis" name="chassis_no" class="form-control">
             </div>
             <!-- Estimated date of arrival  -->
             <div class="col-12 col-md-6 input">
                 <label for="arrival-date">Estimated date of arrival*</label>
-                <input type="date" id="arrival-date" name="arrival_date" class="form-control">
+                <input value="{{ old('arrival_date') }}" type="date" id="arrival-date" name="arrival_date" class="form-control">
             </div>
             <!-- make  -->
             <div class="col-12 col-md-6 input">
@@ -113,7 +113,7 @@
             <!-- Seating Rows  -->
             <div class="space-even">
                 <label for="">Seating Placement*</label>
-                <button style="border: 1px solid black; padding:3px;">Add seating row</button>
+                <button type="button" class="btn btn-outline-success">Add seating row</button>
             </div>
             <div class="col-10 input">
                 <label for="driveType">Seat row 1</label>

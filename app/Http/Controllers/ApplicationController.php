@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ApplicationController extends Controller
 {
@@ -13,7 +14,6 @@ class ApplicationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public $new_application=[];
 
     public function viewApplications(Request $request)
     {
@@ -42,11 +42,13 @@ class ApplicationController extends Controller
     public function show_Step_one()
     {
         $step = 1;
-        $percentage = 0; 
-        return view('applications/create', compact('step','percentage'));
+        $percentage = 0;
+        return view('applications/create', compact('step', 'percentage'));
     }
     public function create_form_step_one(Request $request)
     {
+        $new_application = [];
+
         $validatedData = $request->validate([
             'approvel' => 'required',
             'vass' => 'required',
@@ -61,33 +63,39 @@ class ApplicationController extends Controller
             'bodyType' => 'required',
             'transmission' => 'required',
             'driveType' => 'required'
-        ]); 
-        $this->new_application['approvel'] = $request->input('approvel');
-        $this->new_application['vass'] = $request->input('vass');
-        $this->new_application['chassis_no'] = $request->input('chassis_no');
-        $this->new_application['arrival_date'] = $request->input('arrival_date');
-        $this->new_application['make'] = $request->input('make');
-        $this->new_application['model'] = $request->input('model');
-        $this->new_application['build_date'] = $request->input('buildDate');
-        $this->new_application['fuel_type'] = $request->input('fuelType');
-        $this->new_application['transmission'] = $request->input('transmission');
-        $this->new_application['body_type'] = $request->input('bodyType');
-        $this->new_application['drive_type'] = $request->input('driveType');
-        $this->new_application['seats'] = $request->input('seatRow1');
-       dd("vh");
+        ]);
+        $new_application['approvel'] = $request->input('approvel');
+        $new_application['vass'] = $request->input('vass');
+        $new_application['chassis_no'] = $request->input('chassis_no');
+        $new_application['arrival_date'] = $request->input('arrival_date');
+        $new_application['make'] = $request->input('make');
+        $new_application['model'] = $request->input('model');
+        $new_application['build_date'] = $request->input('buildDate');
+        $new_application['fuel_type'] = $request->input('fuelType');
+        $new_application['transmission'] = $request->input('transmission');
+        $new_application['body_type'] = $request->input('bodyType');
+        $new_application['drive_type'] = $request->input('driveType');
+        $new_application['seats'] = $request->input('seatRow1');
+
+        // Storing the values in the Session Since we need to acces within the other steps  
+        // if we can find a better way to pass the values within forms need to implement 
+        Session::put('new_application', $new_application);
+
         return redirect('create-application_2');
     }
 
     // Form Two 
     public function show_Step_two()
     {
+
         $step = 2;
-        $percentage = 50; 
-        return view('applications/create', compact('step','percentage'));
+        $percentage = 50;
+        $new_application = Session::get('new_application', []);
+        return view('applications/create', compact('step', 'percentage'));
     }
     public function create_form_step_two(Request $request)
     {
-       
+
         return redirect('create-application_3');
     }
 
@@ -95,12 +103,13 @@ class ApplicationController extends Controller
     public function show_Step_three()
     {
         $step = 3;
-        $percentage = 100; 
-        return view('applications/create', compact('step','percentage'));
+        $percentage = 100;
+       
+        return view('applications/create', compact('step', 'percentage'));
     }
     public function create_form_step_three(Request $request)
     {
-       
+
         return redirect('applications');
     }
 
