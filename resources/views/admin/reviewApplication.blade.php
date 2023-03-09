@@ -231,8 +231,8 @@
             </div>
             <button class="btn-prev button" id="btn-back-to-top">Back</button>
             <div class="right">
-                <button class="btn-save button">Save as Draft</button>
-                <button class="btn-next button" id="btn-back-to-top">Next Page</button>
+                <button class="btn-next button">Reject</button>
+                <button class="btn-next button" id="btn-back-to-top">Submit</button>
             </div>
 </div>
 <script src="{{ asset('js/review.js') }}"></script>
