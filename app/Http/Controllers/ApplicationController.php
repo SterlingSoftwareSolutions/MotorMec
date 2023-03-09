@@ -53,6 +53,7 @@ class ApplicationController extends Controller
         $percentage = 0;
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_one(Request $request)
     {
         $new_application = [];
@@ -100,6 +101,7 @@ class ApplicationController extends Controller
         $new_application = Session::get('new_application', []);
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_two(Request $request)
     {
 
@@ -114,10 +116,21 @@ class ApplicationController extends Controller
        
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_three(Request $request)
     {
-
+        $new_application = Session::get('new_application', []);
+        $new_application['status'] = 'in-review';
+        $this->save($new_application);
         return redirect('applications');
+    }
+
+    // save application
+    public function save(Array $data)
+    {
+        $data['user_id'] = Auth::user()->id;
+        $data['application_date'] = now();
+        Application::create($data);
     }
 
 
@@ -148,10 +161,6 @@ class ApplicationController extends Controller
             'additional_info' => $not_draft
         ]);
 
-        $fields['user_id'] = Auth::user()->id;
-        $fields['application_date'] = now();
-
-        Application::create($fields);
     }
 
     /**
