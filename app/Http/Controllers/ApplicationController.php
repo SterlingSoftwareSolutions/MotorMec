@@ -13,7 +13,7 @@ class ApplicationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+    public $new_application=[];
 
     public function viewApplications(Request $request)
     {
@@ -47,7 +47,34 @@ class ApplicationController extends Controller
     }
     public function create_form_step_one(Request $request)
     {
-       dd($request);
+        $validatedData = $request->validate([
+            'approvel' => 'required',
+            'vass' => 'required',
+            'chassis_no' => 'required',
+            'arrival_date' => 'required',
+            'arrival_date' => 'required',
+            'make' => 'required',
+            'model' => 'required',
+            'buildDate' => 'required',
+            'fuelType' => 'required',
+            'transmission' => 'required',
+            'bodyType' => 'required',
+            'transmission' => 'required',
+            'driveType' => 'required'
+        ]); 
+        $this->new_application['approvel'] = $request->input('approvel');
+        $this->new_application['vass'] = $request->input('vass');
+        $this->new_application['chassis_no'] = $request->input('chassis_no');
+        $this->new_application['arrival_date'] = $request->input('arrival_date');
+        $this->new_application['make'] = $request->input('make');
+        $this->new_application['model'] = $request->input('model');
+        $this->new_application['build_date'] = $request->input('buildDate');
+        $this->new_application['fuel_type'] = $request->input('fuelType');
+        $this->new_application['transmission'] = $request->input('transmission');
+        $this->new_application['body_type'] = $request->input('bodyType');
+        $this->new_application['drive_type'] = $request->input('driveType');
+        $this->new_application['seats'] = $request->input('seatRow1');
+       dd("vh");
         return redirect('create-application_2');
     }
 

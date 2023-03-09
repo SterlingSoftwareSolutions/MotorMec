@@ -49,7 +49,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="make">Make*</label>
                 <select class="form-control" id="make" name="make">
-                    <option value="volvo">Select</option>
+                    <option disabled selected  value="volvo">Select</option>
                     <option value="saab">Honda</option>
                     <option value="fiat">Toyota</option>
                     <option value="audi">Ford</option>
@@ -59,7 +59,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="model">Model*</label>
                 <select class="form-control" id="model" name="model">
-                    <option value="volvo">Select</option>
+                    <option disabled selected  value="volvo">Select</option>
                     <option value="saab">Honda Civic</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
@@ -74,7 +74,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="fuelType">Fuel Type*</label>
                 <select class="form-control" id="fuelType" name="fuelType">
-                    <option value="volvo">Select</option>
+                    <option disabled selected value="volvo">Select</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
@@ -84,7 +84,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="transmission">Transmission*</label>
                 <select class="form-control" id="transmission" name="transmission">
-                    <option value="volvo">Select</option>
+                    <option  disabled selected value="volvo">Select</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
@@ -94,7 +94,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="bodyType">Body Type*</label>
                 <select class="form-control" id="bodyType" name="bodyType">
-                    <option value="volvo">Select</option>
+                    <option  disabled selected value="volvo">Select</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
@@ -104,7 +104,7 @@
             <div class="col-12 col-md-6 input">
                 <label for="driveType">Drive Type*</label>
                 <select class="form-control" id="driveType" name="driveType">
-                    <option value="volvo">Select</option>
+                    <option  disabled selected value="volvo">Select</option>
                     <option value="saab">Saab</option>
                     <option value="fiat">Fiat</option>
                     <option value="audi">Audi</option>
