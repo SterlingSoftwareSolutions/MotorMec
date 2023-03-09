@@ -6,6 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    private $asset_types = [
+        'img_front_left',
+        'img_front_right',
+        'img_rear_left',
+        'img_rear_right'
+        // TODO: add all asset types here
+    ];
     /**
      * Run the migrations.
      *
@@ -16,7 +23,7 @@ return new class extends Migration
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('application_id')->constrained()->cascadeOnDelete();
-            $table->enum('asset_type', ['front_left', 'front_right']);
+            $table->enum('asset_type', $this->asset_types);
             $table->string('location')->nullable();
             $table->timestamps();
         });
