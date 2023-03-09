@@ -39,6 +39,7 @@ body {
     transition: 0.4s;
     padding: 3px;
     z-index: 3;
+    cursor: pointer;
 }
 
 .main-content {
@@ -90,7 +91,6 @@ ul {
     width: max-content !important;
 }
 
-
 .nav-link {
     font-size: 1.20em !important;
     color: white !important;
@@ -110,8 +110,6 @@ ul {
     margin-bottom: 5px;
   }
   
-
-
 .dropdown-menu{
     padding: 0 !important;
     width: 100%;
@@ -122,7 +120,7 @@ ul {
 }
 
 
-  .navbar-expand-sm .navbar-nav .dropdown-menu{
+.navbar-expand-sm .navbar-nav .dropdown-menu{
     position: relative !important;
   }
   
@@ -154,9 +152,9 @@ a[aria-expanded="true"] {
     padding-left: 25px !important;
 }
 
-.sidebar-dropdown-item:active,
-.sidebar-dropdown-item:focus,
-.sidebar-dropdown-item:hover {
+#application-stage .sidebar-dropdown-item:active,
+#application-stage .sidebar-dropdown-item:focus,
+#application-stage .sidebar-dropdown-item:hover {
     background-color: black !important;
 }
 
@@ -175,10 +173,10 @@ a[aria-expanded="true"] ul {
     transition: transform 0.3s ease-in-out; 
 }
 
-
 .active-cont {
     margin-left: -300px;
 }
+
 
 @media only screen and (max-width: 576px) {
 
@@ -240,24 +238,10 @@ a[aria-expanded="true"] ul {
     width: 20px;
 }
 
-
-
-.profile-btn {
-    text-align: center !important;
-    background-color: #6E6E6E !important;
-    margin-bottom: 5px;
-    width: 80% !important;
-    border-radius: 10px !important;
-    margin-left: 10%;
+#profile-dropdown .logout-btn:hover{
+    color: red !important;
 }
 
-.logout-btn {
-    text-align: center !important;
-    border-radius: 10px !important;
-    background-color: #DB4848 !important;
-    width: 80% !important;
-    margin-left: 10%;
-}
 
 /* Create Application*/
 /* progress bar */
@@ -296,14 +280,11 @@ a[aria-expanded="true"] ul {
     justify-content: center;
 }
 
-
 .progress-step::before {
     counter-increment: step;
     content: counter(step);
     color: white;
 }
-
-
 
 .progress-step::after {
     content: attr(data-title);
@@ -793,8 +774,6 @@ select {
     padding: 20px 10px;
 }
 
-
-
 .input-container {
     position: relative;
 }
@@ -802,7 +781,6 @@ select {
 .input-container input::placeholder {
     text-align: center;
 }
-
 
 .input-container .icon1 {
     position: absolute;
