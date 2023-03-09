@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -15,27 +16,34 @@ class ApplicationController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function viewApplications(Request $request)
+    public function list(Request $request)
     {
-        $status = $request->input('status');
+        $query = Application::query();
 
-        if ($status === 'Completed') {
-            $applications = Application::where('status', 'Completed')->get();
-        } elseif ($status === 'Rejected') {
-            $applications = Application::where('status', 'Rejected')->get();
-        } elseif ($status === 'Pending') {
-            $applications = Application::where('status', 'Pending')->get();
-        } elseif ($status === 'Draft') {
-            $applications = Application::where('status', 'Draft')->get();
-        } else {
-            $applications = Application::all();
+        // Filter applications by their status
+        if($request->has('status')){
+
+            // 'pending' describes multiple different statuses
+            if($request->status == 'pending'){
+                $query->where('status', 'in-review');
+                $query->orWhere('status', 'submitted');
+                $query->orWhere('status', 'via-approved');
+                $query->orWhere('status', 'in-compliance');
+            }
+            else{
+                $query->where('status', $request->status);
+            }
         }
 
-        $parameters = [
-            'status' => $status,
-            'applications' => $applications,
-        ];
-        return view('applications/index', $parameters);
+        // Filter by user id
+        if($request->has('user_id')){
+            $query->where('user_id', $request->user_id);
+        }
+
+        return view(
+            'applications/index',
+            ['applications' => $query->get()]
+        );
     }
 
     // Form One 

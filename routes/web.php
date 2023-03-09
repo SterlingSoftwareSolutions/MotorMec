@@ -48,7 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     //View Applications
-    Route::get('applications', [ApplicationController::class, 'viewApplications']);
+    Route::get('applications', [ApplicationController::class, 'list']);
 
     Route::group(['middleware' => 'role:admin,superadmin', 'prefix' => 'admin'], function () {
         Route::get('dashboard', [AdminDashboardController::class, 'index']);
