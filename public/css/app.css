@@ -161,10 +161,6 @@ a[aria-expanded="true"] ul {
 }
 
 
-.active-nav {
-    margin-left: 0px;
-}
-
 .active-cont {
     margin-left: -300px;
 }
@@ -255,6 +251,8 @@ a[aria-expanded="true"] ul {
     justify-content: space-between;
     counter-reset: step;
     margin: 2rem 0rem 5rem 0rem;
+    border: 1px solid #2BB673;
+    padding: 7% 5% 7% 5%;
 }
 
 .progressBar::before,
@@ -264,7 +262,7 @@ a[aria-expanded="true"] ul {
     top: 50%;
     transform: translateY(-50%);
     height: 4px !important;
-    width: 100%;
+    width: 90%;
     background-color: #BEBEBE;
     z-index: -1;
 }
@@ -272,6 +270,7 @@ a[aria-expanded="true"] ul {
 .progress {
     background-color: #2BB673 !important;
     width: 0%;
+    margin-right: 0;
 }
 
 .progress-step {
@@ -296,7 +295,7 @@ a[aria-expanded="true"] ul {
 .progress-step::after {
     content: attr(data-title);
     position: absolute;
-    top: calc(100% + 0.75rem);
+    top: calc(68%);
     font-size: 0.85rem;
     color: #666;
 }
@@ -320,7 +319,7 @@ h4.title {
     width: 100%;
     position: relative;
     margin-top: -24px;
-    height: 5px;
+    height: 2px;
     z-index: -1;
 }
 
@@ -328,6 +327,10 @@ h4.title {
     margin-top: 5px !important;
     display: flex;
     flex-direction: column;
+}
+
+.select-control{
+    line-height: 1.5rem;
 }
 
 .vehi-info {
@@ -345,6 +348,12 @@ select {
 .space-even {
     display: flex;
     justify-content: space-between;
+}
+
+.seatingBtn{
+    background-color: white;
+    border: 1px solid black; 
+    padding:3px;
 }
 
 .btn-prev,
@@ -378,6 +387,10 @@ select {
 
 .form-step {
     display: none;
+}
+
+.form-step input[type='radio']:checked::after{
+    background-color: #2BB673;
 }
 
 .form-step-active {
@@ -472,7 +485,6 @@ select {
 .btn_upload .upload-text {
     color: white;
     font-size: 12px;
-    margin-top: -20px;
     display: flex;
     flex-direction: column;
 }
@@ -638,9 +650,6 @@ select {
 }
 
 /* Code Pen Mulyipel Img */
-p {
-    margin: 0;
-}
 
 .upload__box {
     padding: 40px;
@@ -828,3 +837,57 @@ p {
     box-shadow: 0 0 5px rgba(128, 128, 128, 0.5) !important;
 }
 /*-- userProfile page styling-- */
+
+
+/* review application page */
+
+.textbox p{
+ margin: 0;
+}
+  
+.textbox {
+    border: 1px solid black;
+    padding: 10px;
+    position: relative;
+    width: max-content;
+  }
+  
+  .remove-icon {
+    color: red;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .recover-icon{
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .textbox:hover .remove-icon {
+    opacity: 1;
+  }
+  
+  .textbox.clicked {
+    border-color: red;
+  }
+  
+  .recover-icon:before {
+    content: "\f021";
+    font-family: FontAwesome;
+  }
+  
+  .clicked .remove-icon:before {
+    content: "\f021";
+    font-family: FontAwesome;
+  }
+  

@@ -2,15 +2,21 @@
 @include('sidebar')
 @include('header')
 @section('content')
-<div class="form-step-active view-app">
+<div class="form-step-active review-app">
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Approval Type</h4>
-            <p>25 Year Rule</p>
+            <div class="textbox">
+                <p>25 Year Rule</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>VASS Engineering</h4>
+            <div class="textbox">
             <p>MotorMec Engineering</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <h4 class="title">Vehicle Info</h4>
@@ -19,53 +25,83 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Chassis/Frame Number</h4>
+            <div class="textbox">
             <p>123</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>Estimated date of arrival</h4>
+            <div class="textbox">
             <p>22/02/2022</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Make</h4>
+            <div class="textbox">
             <p>Toyota</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>Model</h4>
+            <div class="textbox">
             <p>Supra</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Build date</h4>
+            <div class="textbox">
             <p>22/02/2000</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>Fuel Type</h4>
+            <div class="textbox">
             <p>Petrol</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Transmission</h4>
+            <div class="textbox">
             <p>Auto</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
         <div class="col-12 col-md-6">
             <h4>Body Type</h4>
+            <div class="textbox">
             <p>Crossover</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             <h4>Drive Type</h4>
+            <div class="textbox">
             <p>Front Wheel Drive</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             <h4>Seating Placement</h4>
+            <div class="textbox">
             <p>Seats 1</p>
+                <span class="remove-icon">&#10006;</span>
+            </div>
         </div>
     </div>
     <h4 class="title">Support Documents</h4>
@@ -147,7 +183,7 @@
                 <label for="file">Please add at least 4 clear photos</label>
                 <div class="d-row mt-3">
                     <div class="longBox">
-                        <div id="image-container"><div class="image-preview"><img src=""><div class="remove-button">X</div></div></div>
+                        <div id="image-container"><div class="image-preview"><img src=""><div class="remove-button"></div></div></div>
                     </div>
                 </div>
             </div>
@@ -158,7 +194,6 @@
                     <label for="file7">Invoice*</label>
                     <div class="box">
                         <div class="btn_upload">
-                            <input type="file" id="file7" onchange="previewImage(this, 'preview7', 'remove7', 'uploadBtn7')" multiple>
                             <div id="preview7"></div>
                             <span class="upload-text" id="uploadBtn7">
                                 <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -172,7 +207,6 @@
                     <label for="file8">Export Certificate</label>
                     <div class="box">
                         <div class="btn_upload">
-                            <input type="file" id="file8" onchange="previewImage(this, 'preview8', 'remove8', 'uploadBtn8')" multiple>
                             <div id="preview8"></div>
                             <span class="upload-text" id="uploadBtn8">
                                 <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -185,7 +219,6 @@
                     <label for="file9">Auction Report</label>
                     <div class="box">
                         <div class="btn_upload">
-                            <input type="file" id="file9" onchange="previewImage(this, 'preview9', 'remove9', 'uploadBtn9')" multiple>
                             <div id="preview9"></div>
                             <span class="upload-text" id="uploadBtn9">
                                 <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -202,4 +235,5 @@
                 <button class="btn-next button" id="btn-back-to-top">Next Page</button>
             </div>
 </div>
+<script src="{{ asset('js/review.js') }}"></script>
 @endsection

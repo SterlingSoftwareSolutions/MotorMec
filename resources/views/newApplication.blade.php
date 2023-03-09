@@ -16,13 +16,13 @@
             <div class="field field1">
                 <h5>Approval Type</h5>
                 <div class="input-group radio">
-                    <div class="col-md-5">
+                    <div class="col-md-5 d-row">
                         <input type="radio" id="approval1" name="approval" value="1">
                         <label for="approval1">SEV's Entry / RAW's Modification</label><br>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 d-row">
                         <input type="radio" id="approval2" name="approval" value="2">
-                        <label for="approval2">SEV's Entry / RAW's Modification</label><br>
+                        <label for="approval2">Vehicle is older than 25 years</label><br>
                     </div>
 
                 </div>
@@ -30,11 +30,11 @@
             <div class="field field2">
                 <h5>VASS Engineering</h5>
                 <div class="input-group radio">
-                    <div class="col-md-5">
+                    <div class="col-md-5 d-row">
                         <input type="radio" id="vass1" name="vass" value="1">
                         <label for="vass1">MotorMec Engineering </label><br>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 d-row">
                         <input type="radio" id="vass2" name="vass" value="2">
                         <label for="vass2">Own Engineering</label><br>
                     </div>
@@ -49,11 +49,11 @@
                 </div>
                 <div class="col-12 col-md-5 input">
                     <label for="arrival-date">Estimated date of arrival*</label>
-                    <input type="date" id="arrival-date" name="arrival-date" class="form-control">
+                    <input type="date" id="arrival-date" name="arrival-date">
                 </div>
                 <div class="col-12 col-md-5 input">
                     <label for="make">Make*</label>
-                    <select id="make" name="make">
+                    <select id="make" name="make" class="select-control">
                         <option value="volvo">Select</option>
                         <option value="saab">Saab</option>
                         <option value="fiat">Fiat</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-12 col-md-5 input">
                     <label for="model">Model*</label>
-                    <select id="model" name="model">
+                    <select id="model" name="model" class="select-control">
                         <option value="volvo">Select</option>
                         <option value="saab">Saab</option>
                         <option value="fiat">Fiat</option>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="space-even">
                     <label for="">Seating Placement*</label>
-                    <button style="border: 1px solid black; padding:3px;">Add seating row</button>
+                    <button class="seatingBtn">Add seating row</button>
                 </div>
                 <div class="col-10 input">
                     <label for="driveType">Seat row 1</label>
