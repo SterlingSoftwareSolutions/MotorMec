@@ -250,9 +250,10 @@ a[aria-expanded="true"] ul {
     display: flex;
     justify-content: space-between;
     counter-reset: step;
-    margin: 2rem 0rem 5rem 0rem;
+    margin: 2rem 15px 5rem 15px;
     border: 1px solid #2BB673;
     padding: 7% 0% 7% 0%;
+    border-radius: 0.7rem;
 }
 
 .progressBar::before,
@@ -495,7 +496,8 @@ select {
 .column {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .d-row {

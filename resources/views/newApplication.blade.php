@@ -134,7 +134,7 @@
         <!--  -->
         <div class="form-step form2">
             <div class="d-row row mt-3">
-                <div class="column col-5 col-md-3">
+                <div class="column col-5">
                     <label for="file1">Engine Photo*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -148,7 +148,7 @@
                         <button type="button" id="remove1" onclick="removeImage('preview1', 'remove1', 'uploadBtn1')" style="display:none">X</button>
                     </div>
                 </div>
-                <div class="column col-5 col-md-3">
+                <div class="column col-5">
                     <label for="file2">Chassis/ Frame Photo*</label>
                     <div class="box">
                         <div class="btn_upload">
@@ -164,7 +164,7 @@
             </div>
             <h4 class="title">Exterior Images</h4>
             <div class="hr">&nbsp;</div>
-            <div class="d-row mt-3">
+            <div class="d-row row mt-3">
                 <div class="column col-5 col-md-3">
                     <label for="file3">Front Right Corner*</label>
                     <div class="box">
