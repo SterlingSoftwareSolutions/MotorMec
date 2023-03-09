@@ -22,37 +22,50 @@
             <h2>Sign Up</h2>
             <div class="input-control">
                 <input id="name" name="name" type="text" placeholder="Name">
-                <div class="error"></div>
+                @error('name')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
             <div class="input-control">
                 <input id="businessname" name="businessname" type="text" placeholder="Business Name">
-                <div class="error"></div>
+                @error('businessname')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
             <div class="input-control">
                 <input id="username" name="username" type="text" placeholder="User Name">
-                <div class="error"></div>
+                @error('username')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
             <div class="input-control">
                 <input id="email" name="email" type="text" placeholder="Email Adress">
-                <div class="error"></div>
+                @error('email')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
             <div class="input-control">
-                <input type="tel" name="mobile" id="mobile" placeholder="Mobile Number">
-                <div class="error"></div>
+                <input type="tel" name="phone" id="phone" placeholder="Mobile Number">
+                @error('phone')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
 
             <div class="input-control">
                 <input type="password" name="password" id="password" placeholder="Password">
-                <div class="error"></div>
+                @error('password')
+                    <div class="error">{{$message}}</div>
+                @enderror
             </div>
             <div class="input-control">
-                <input type="password" name="password2" id="password2" placeholder="Confirm Password">
+                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password">
                 <div class="error"></div>
             </div>
+
             <button type="submit ">Get Started</button>
 
             <div class="sign-up">
-                <h6 class="mt-4">Already have an Account? <a href="" style="color:#2B684C">login</a></h>
+                <h6 class="mt-4">Already have an Account? <a href="/login" style="color:#2B684C">login</a></h>
             </div>
 
             <div class="copyright">
