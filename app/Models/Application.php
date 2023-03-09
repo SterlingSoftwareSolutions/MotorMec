@@ -12,6 +12,7 @@ class Application extends Model
         'user_id',
         'application_date',
         'status',
+
         'approval_type',
         'vass_engineering',
         'arrival_date',
@@ -24,7 +25,21 @@ class Application extends Model
         'body_type',
         'drive_type',
         'seats',
-        'additional_info'
+        'additional_info',
+
+        'model_report_holder',
+        'model_report_name',
+        'sev',
+        'submission_reference_number',
+        'approval_number',
+        'vin',
+        'compliance_reference_number',
+        'mr_udn_requested'.
+        'udn_number',
+        'engine_number',
+        'tare_mass',
+        'power_kw'
+
     ];
 
     public function assets()

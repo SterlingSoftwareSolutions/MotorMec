@@ -3,39 +3,57 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class ApplicationController extends Controller
 {
+
+    public function validate_input($fields, bool $update)
+    {
+        if($update){
+            $validated = $fields->validate([
+
+            ]);
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function viewApplications(Request $request)
+    public function list(Request $request)
     {
-        $status = $request->input('status');
+        $query = Application::query();
 
-        if ($status === 'Completed') {
-            $applications = Application::where('status', 'Completed')->get();
-        } elseif ($status === 'Rejected') {
-            $applications = Application::where('status', 'Rejected')->get();
-        } elseif ($status === 'Pending') {
-            $applications = Application::where('status', 'Pending')->get();
-        } elseif ($status === 'Draft') {
-            $applications = Application::where('status', 'Draft')->get();
-        } else {
-            $applications = Application::all();
+        // Filter applications by their status
+        if($request->has('status')){
+
+            // 'pending' describes multiple different statuses
+            if($request->status == 'pending'){
+                $query->where('status', 'in-review');
+                $query->orWhere('status', 'submitted');
+                $query->orWhere('status', 'via-approved');
+                $query->orWhere('status', 'in-compliance');
+            }
+            else{
+                $query->where('status', $request->status);
+            }
         }
 
-        $parameters = [
-            'status' => $status,
-            'applications' => $applications,
-        ];
-        return view('applications/index', $parameters);
+        // Filter by user id
+        if($request->has('user_id')){
+            $query->where('user_id', $request->user_id);
+        }
+
+        return view(
+            'applications/index',
+            ['applications' => $query->get()]
+        );
     }
 
     // Form One 
@@ -45,6 +63,7 @@ class ApplicationController extends Controller
         $percentage = 0;
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_one(Request $request)
     {
         $new_application = [];
@@ -64,10 +83,10 @@ class ApplicationController extends Controller
             'transmission' => 'required',
             'driveType' => 'required'
         ]);
-        $new_application['approvel'] = $request->input('approvel');
-        $new_application['vass'] = $request->input('vass');
-        $new_application['chassis_no'] = $request->input('chassis_no');
+        $new_application['approval_type'] = $request->input('approvel');
+        $new_application['vass_engineering'] = $request->input('vass');
         $new_application['arrival_date'] = $request->input('arrival_date');
+        $new_application['chassis_no'] = $request->input('chassis_no');
         $new_application['make'] = $request->input('make');
         $new_application['model'] = $request->input('model');
         $new_application['build_date'] = $request->input('buildDate');
@@ -92,6 +111,7 @@ class ApplicationController extends Controller
         $new_application = Session::get('new_application', []);
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_two(Request $request)
     {
 
@@ -106,10 +126,21 @@ class ApplicationController extends Controller
        
         return view('applications/create', compact('step', 'percentage'));
     }
+
     public function create_form_step_three(Request $request)
     {
-
+        $new_application = Session::get('new_application', []);
+        $new_application['status'] = 'in-review';
+        $this->save($new_application);
         return redirect('applications');
+    }
+
+    // save application
+    public function save(Array $data)
+    {
+        $data['user_id'] = Auth::user()->id;
+        $data['application_date'] = now();
+        Application::create($data);
     }
 
 
@@ -121,29 +152,7 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        $not_draft = 'required_if:draft,==,false|';
 
-        $fields = $request->validate([
-            'draft' => 'required',
-            'approval_type' => $not_draft,
-            'vass_engineering' => $not_draft,
-            'arrival_date' => $not_draft,
-            'chassis_no' => $not_draft,
-            'make' => $not_draft,
-            'model' => $not_draft,
-            'build_date' => $not_draft,
-            'fuel_type' => $not_draft,
-            'transmission' => $not_draft,
-            'body_type' => $not_draft,
-            'drive_type' => $not_draft,
-            'seats' => $not_draft,
-            'additional_info' => $not_draft
-        ]);
-
-        $fields['user_id'] = Auth::user()->id;
-        $fields['application_date'] = now();
-
-        Application::create($fields);
     }
 
     /**
@@ -165,7 +174,7 @@ class ApplicationController extends Controller
      */
     public function edit(Application $application)
     {
-        //
+        return view("applications/edit", ['application' => $application]);
     }
 
     /**
@@ -177,7 +186,40 @@ class ApplicationController extends Controller
      */
     public function update(Request $request, Application $application)
     {
-        //
+        $fields = $request->validate([
+            'user_id' => 'sometimes|required',
+            'application_date' => 'sometimes|required',
+            'status' => 'sometimes|required',
+
+            'approval_type' => 'sometimes|required',
+            'vass_engineering' => 'sometimes|required',
+            'arrival_date' => 'sometimes|required',
+            'chassis_no' => 'sometimes|required',
+            'make' => 'sometimes|required',
+            'model' => 'sometimes|required',
+            'build_date' => 'sometimes|required',
+            'fuel_type' => 'sometimes|required',
+            'transmission' => 'sometimes|required',
+            'body_type' => 'sometimes|required',
+            'drive_type' => 'sometimes|required',
+            'seats' => 'sometimes|required',
+            'additional_info' => 'sometimes|required',
+
+            'model_report_holder' => 'sometimes|nullable',
+            'model_report_name' => 'sometimes|nullable',
+            'sev' => 'sometimes|nullable',
+            'submission_reference_number' => 'sometimes|nullable',
+            'approval_number' => 'sometimes|nullable',
+            'vin' => 'sometimes|nullable',
+            'compliance_reference_number' => 'sometimes|nullable',
+            'mr_udn_requested' => 'sometimes|nullable',
+            'udn_number' => 'sometimes|nullable',
+            'engine_number' => 'sometimes|nullable',
+            'tare_mass' => 'sometimes|nullable',
+            'power_kw' => 'sometimes|nullable'
+        ]);
+
+        $application->update($fields);
     }
 
     /**
@@ -188,6 +230,6 @@ class ApplicationController extends Controller
      */
     public function destroy(Application $application)
     {
-        //
+        $application->delete();
     }
 }
