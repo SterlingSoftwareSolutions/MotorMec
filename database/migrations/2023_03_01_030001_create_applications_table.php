@@ -6,6 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    private $application_statuses = [
+        'draft',
+        'in-review',
+        'submitted',
+        'via-approved',
+        'in-compliace',
+        'completed',
+        'rejected'
+    ];
+
     /**
      * Run the migrations.
      *
@@ -19,7 +29,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->datetime('application_date')->nullable();
-            $table->string('status')->nullable();
+            $table->enum('status', $this->application_statuses);
 
             // User filled fields
             $table->string('approval_type')->nullable();
