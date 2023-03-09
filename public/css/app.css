@@ -222,6 +222,10 @@ a[aria-expanded="true"] ul {
     width: 20px;
 }
 
+#profile-dropdown{
+    z-index: 1000;
+}
+
 #profile-dropdown .logout-btn:hover{
     color: red !important;
 }
@@ -1082,7 +1086,7 @@ select {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 1;
   }
   .percent .number {
     position: absolute;
@@ -1116,7 +1120,7 @@ select {
     position: relative;
     width: 150px;
     height: 150px;
-    z-index: 1000;
+    z-index: 1;
     overflow: visible;
   }
   svg circle
