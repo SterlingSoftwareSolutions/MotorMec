@@ -71,7 +71,7 @@
                     <th class="col-1">ID</th>
                     <th class="col-2 text-center">Photo</th>
                     <th class="col-4 text-center">Make & Model</th>
-                    <th class="col-2 ">Status</th>
+                    <th class="col-3 ">Status</th>
                     <th class="col-1">Actions</th>
                 </tr>
             </thead>

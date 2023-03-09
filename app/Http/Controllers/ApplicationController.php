@@ -13,27 +13,70 @@ class ApplicationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+
+    public function viewApplications(Request $request)
     {
+        $status = $request->input('status');
 
+        if ($status === 'Completed') {
+            $applications = Application::where('status', 'Completed')->get();
+        } elseif ($status === 'Rejected') {
+            $applications = Application::where('status', 'Rejected')->get();
+        } elseif ($status === 'Pending') {
+            $applications = Application::where('status', 'Pending')->get();
+        } elseif ($status === 'Draft') {
+            $applications = Application::where('status', 'Draft')->get();
+        } else {
+            $applications = Application::all();
+        }
 
-        $parameteres = [
-            'applications' => Application::all(),
+        $parameters = [
+            'status' => $status,
+            'applications' => $applications,
         ];
-        //dd($parameteres);
-        return view('applications/index', $parameteres);
+        return view('applications/index', $parameters);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    // Form One 
+    public function show_Step_one()
     {
-        return view('applications/create');
-
+        $step = 1;
+        $percentage = 0; 
+        return view('applications/create', compact('step','percentage'));
     }
+    public function create_form_step_one(Request $request)
+    {
+       dd($request);
+        return redirect('create-application_2');
+    }
+
+    // Form Two 
+    public function show_Step_two()
+    {
+        $step = 2;
+        $percentage = 50; 
+        return view('applications/create', compact('step','percentage'));
+    }
+    public function create_form_step_two(Request $request)
+    {
+       
+        return redirect('create-application_3');
+    }
+
+    // Form Three 
+    public function show_Step_three()
+    {
+        $step = 3;
+        $percentage = 100; 
+        return view('applications/create', compact('step','percentage'));
+    }
+    public function create_form_step_three(Request $request)
+    {
+       
+        return redirect('applications');
+    }
+
 
     /**
      * Store a newly created resource in storage.

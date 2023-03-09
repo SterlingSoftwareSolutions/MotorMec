@@ -44,16 +44,19 @@
     <td>
         @if($application->status === "Rejected")
         <button disabled class="btn btn-outline-danger draft-btn mt-5">Rejected</button>
-        @else
-        <button class="btn btn-outline-success draft-btn mt-5">Completed</button>
+        @elseif($application->status === "Draft")
+        <button disabled class="btn btn-outline-secondary draft-btn mt-5">Draft</button>
+        @elseif($application->status === "Review")
+        <button disabled class="btn btn-outline-warning draft-btn mt-5">Review</button>
+        @elseif($application->status === "Submitted")
+        <button disabled class="btn btn-outline-warning draft-btn mt-5">Submitted</button>
+        @elseif($application->status === "Completed")
+        <button disabled class="btn btn-outline-success draft-btn mt-5">Completed</button>
+        @elseif($application->status === "In Compliance")
+        <button disabled class="btn btn-outline-warning draft-btn mt-5">In Compliance</button>
+        @elseif($application->status === "VIA Granted")
+        <button disabled class="btn btn-outline-warning draft-btn mt-5">VIA Granted</button>
         @endif
-        <!-- <button class="btn btn-outline-secondary draft-btn mt-5">Draft</button>
-                        <button class="btn btn-outline-warning draft-btn mt-5">Review</button>
-                        <button class="btn btn-outline-warning draft-btn mt-5">Submitted</button>
-                        <button class="btn btn-outline-warning draft-btn mt-5">VIA Granted</button>
-                        <button class="btn btn-outline-warning draft-btn mt-5">In Compliance</button>
-                         -->
-        
     </td>
     <td>
         <div>

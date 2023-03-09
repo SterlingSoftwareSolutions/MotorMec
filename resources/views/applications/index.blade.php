@@ -3,6 +3,5 @@
 @include('header')
 
 @section('content')
-<h1></h1>
 <x-application-table :applications="$applications"/>
 @endsection
