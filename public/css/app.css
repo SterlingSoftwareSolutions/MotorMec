@@ -213,24 +213,10 @@ a[aria-expanded="true"] ul {
     width: 20px;
 }
 
-/* .profile-btn {
-    text-align: center !important;
-    background-color: #6E6E6E !important;
-    margin-bottom: 5px;
-    width: 80% !important;
-    border-radius: 10px !important;
-    margin-left: 10%;
-    width: fit-content;
-    
-} */
+#profile-dropdown .logout-btn:hover{
+    color: red !important;
+}
 
-/* .logout-btn {
-    text-align: center !important;
-    border-radius: 10px !important;
-    background-color: #DB4848 !important;
-    width: 80% !important;
-    margin-left: 10%;
-} */
 
 /* Create Application*/
 /* progress bar */
