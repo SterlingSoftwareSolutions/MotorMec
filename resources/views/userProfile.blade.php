@@ -5,6 +5,7 @@
 
 @section('content')
 <p class="user-profile-h">User Profile Page</p>
+
 <form class=" border border-secondary rounded-3 p-5 mx-auto">
   <div class="row">
     <h4 class="border-bottom border-secondary border-2">Details</h4>
@@ -67,6 +68,8 @@
     </div>
   </div>
 </form>
+
+
 </div>
 </div>
 @endsection

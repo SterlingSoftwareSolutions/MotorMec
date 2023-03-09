@@ -3,10 +3,10 @@
   <div class="" id="navbarNav">
     <ul class="navbar-nav d-flex flex-column">
       <li class="nav-item active">
-        <a class="nav-link" href="/"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a class="nav-link" href="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/"><i class="fas fa-plus-circle"></i> Create New Application</a>
+        <a class="nav-link" href="/create-application"><i class="fas fa-plus-circle"></i> Create New Application</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="applicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -18,7 +18,6 @@
         <li><a class="dropdown-item profile-btn" href="#"><i class="fa fa-user align-middle"></i>Profile</a></li>
         <li><a class="dropdown-item profile-btn" href="#"><i class="fa fa-credit-card align-middle"></i>Billing</a></li>
         <li><a class="dropdown-item logout-btn" href="#"><i class="fas fa-sign-out-alt align-middle"></i>Logout</a></li>
-
       </ul>
     </div>
 

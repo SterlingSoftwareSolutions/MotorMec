@@ -101,12 +101,21 @@ ul {
 
 .dropdown-menu li {
     margin-bottom: 0;
-  }
+}
+
 
 .navbar-expand-sm .navbar-nav .dropdown-menu{
     position: relative !important;
   }
   
+
+.dropdown-menu li:hover a {
+    background-color: white;
+    border-radius: 0;
+    padding: 10px;
+}
+
+
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
@@ -791,7 +800,6 @@ select {
 }
 /*-- userProfile page styling-- */
 
-
 /* review application page */
 
 .textbox {
@@ -827,4 +835,197 @@ select {
   .textbox.active .icon {
     background-image: url('icon-active.png');
   }
-  
+
+/* all application  */
+.dropdown-select {
+    height: 30px !important;
+    border: 1px solid #57C590 !important;
+}
+
+.filter {
+    border: 1px solid #57C590 !important;
+}
+
+.title-form {
+    color: #57C590 !important;
+}
+
+.table-row {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.draft-btn {
+    width: 50%;
+}
+.view-btn{
+    width: 90%;
+}
+.sub-topics{
+    font-size: 1.5vh;
+}
+.t-body{
+    height: fit-content;
+    max-height: 100vh;
+}
+/* Billing CSS  */
+.value-style {
+    height: 100px;
+}
+
+.aud {
+    font-size: 30px !important;
+    margin-left: 38em !important;
+    font-weight: 900 !important;
+}
+
+#paid {
+    margin-left: 30px;
+
+}
+
+.due-class {
+    border: -20px;
+    /* width: 10%; */
+    /* position: absolute;
+       margin-left: 870px;
+       width: 350px !important; */
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: -30px;
+}
+
+#search1 {
+    width: 350px !important;
+    /* position: absolute; */
+
+    margin-left: -80px
+}
+
+.status_class {
+    width: 55px !important;
+
+
+}
+
+#dropdown1 {
+
+    border-radius: 10px;
+    margin-left: -3em !important;
+
+}
+
+.image-cart img {
+
+    width: 100px;
+}
+
+.drop-all {
+    border: 1px solid red !important;
+}
+
+#paynow {
+    font-weight: 600 !important;
+    height: 40px !important;
+    border: none !important;
+    font-size: 20px;
+}
+
+#paynow p {
+    padding: 10px !important;
+    margin-top: -9px !important;
+}
+
+.table-heading {
+    font-size: 12px;
+}
+
+.col-heading {
+    font-size: 13px;
+}
+
+/*billing Mobile*/
+
+@media (max-width: 767px) {
+    .billing-main {
+        height: 50px !important;
+    }
+
+    .billing-main h1 {
+        margin-top: -3px !important;
+        text-align: center !important;
+        padding: 0px !important;
+    }
+
+    .status {
+        margin-top: -20px !important;
+    }
+
+    .image-cart img {
+        width: 14.5em !important;
+    }
+
+    .app-id {
+        width: 100% !important;
+    }
+
+    .app-id p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    .car {
+        margin-top: 10px !important;
+        width: 100% !important;
+    }
+
+    .car p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    .total-value {
+        width: 100% !important;
+    }
+
+    .total-value p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    .paid-amount {
+        width: 100% !important;
+    }
+
+    .paid-amount p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    .remain-amount {
+        width: 100% !important;
+    }
+
+    .remain-amount p {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    .payment-method-success p {
+        width: 100% !important;
+        margin: 30px 0 0 85px !important;
+    }
+
+    .payment-method-remaining p {
+        width: 500% !important;
+        margin: 30px 0 0 50px;
+    }
+
+    .payment-btn button {
+        width: 10em !important;
+        margin: 5px 0 0 20px;
+    }
+
+}
+
+/* Billing Css Ended  */

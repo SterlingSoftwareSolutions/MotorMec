@@ -16,21 +16,21 @@ return new class extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->datetime('application_date')->unique()->nullable();
-            $table->string('status')->unique()->nullable();
-            $table->string('approval_type')->unique()->nullable();
-            $table->string('vass_engineering')->unique()->nullable();
-            $table->datetime('arrival_date')->unique()->nullable();
-            $table->string('chassis_no')->unique()->nullable();
-            $table->string('make')->unique()->nullable();
-            $table->string('model')->unique()->nullable();
-            $table->datetime('build_date')->unique()->nullable();
-            $table->string('fuel_type')->unique()->nullable();
-            $table->string('transmission')->unique()->nullable();
-            $table->string('body_type')->unique()->nullable();
-            $table->string('drive_type')->unique()->nullable();
-            $table->string('seats')->unique()->nullable();
-            $table->string('additional_info')->unique()->nullable();
+            $table->datetime('application_date')->nullable();
+            $table->string('status')->nullable();
+            $table->string('approval_type')->nullable();
+            $table->string('vass_engineering')->nullable();
+            $table->datetime('arrival_date')->nullable();
+            $table->string('chassis_no')->nullable();
+            $table->string('make')->nullable();
+            $table->string('model')->nullable();
+            $table->datetime('build_date')->nullable();
+            $table->string('fuel_type')->nullable();
+            $table->string('transmission')->nullable();
+            $table->string('body_type')->nullable();
+            $table->string('drive_type')->nullable();
+            $table->string('seats')->nullable();
+            $table->string('additional_info')->nullable();
             $table->timestamps();
         });
     }

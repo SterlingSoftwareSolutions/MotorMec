@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Application;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ApplicationController extends Controller
 {
@@ -14,7 +15,13 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        //
+
+
+        $parameteres = [
+            'applications' => Application::all(),
+        ];
+        //dd($parameteres);
+        return view('applications/index', $parameteres);
     }
 
     /**
@@ -24,7 +31,8 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        //
+        return view('applications/create');
+
     }
 
     /**
@@ -35,7 +43,29 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $not_draft = 'required_if:draft,==,false|';
+
+        $fields = $request->validate([
+            'draft' => 'required',
+            'approval_type' => $not_draft,
+            'vass_engineering' => $not_draft,
+            'arrival_date' => $not_draft,
+            'chassis_no' => $not_draft,
+            'make' => $not_draft,
+            'model' => $not_draft,
+            'build_date' => $not_draft,
+            'fuel_type' => $not_draft,
+            'transmission' => $not_draft,
+            'body_type' => $not_draft,
+            'drive_type' => $not_draft,
+            'seats' => $not_draft,
+            'additional_info' => $not_draft
+        ]);
+
+        $fields['user_id'] = Auth::user()->id;
+        $fields['application_date'] = now();
+
+        Application::create($fields);
     }
 
     /**
@@ -46,7 +76,7 @@ class ApplicationController extends Controller
      */
     public function show(Application $application)
     {
-        //
+        return view("applications/show", ['application' => $application]);
     }
 
     /**
