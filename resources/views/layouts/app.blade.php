@@ -23,6 +23,7 @@
         </div>
     </div>
     <div class="footer">
+        @yield('footer')
     </div>
     <script>
         var menu_btn = document.querySelector("#menu-btn")
