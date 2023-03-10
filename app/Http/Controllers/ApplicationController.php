@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\Asset;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Casts\AsStringable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -105,7 +107,6 @@ class ApplicationController extends Controller
     // Form Two 
     public function show_Step_two()
     {
-
         $step = 2;
         $percentage = 50;
         $new_application = Session::get('new_application', []);
@@ -114,7 +115,34 @@ class ApplicationController extends Controller
 
     public function create_form_step_two(Request $request)
     {
-        dd($request);
+        // TODO make all documents required
+        $files = $request->validate([
+            'img_front_left' => 'required|file|max:2048',
+            'img_front_right' => 'required|file|max:2048',
+            'img_rear_left' => 'required|file|max:2048',
+            'img_rear_right' => 'required|file|max:2048',
+            'img_interior' => 'required|file|max:2048',
+            'img_engine' => 'required|file|max:2048',
+            'img_chassis' => 'required|file|max:2048',
+            'doc_invoice' => 'required|max:2048',
+            'doc_export_certificate' => 'required|max:2048',
+            'doc_auction_report' => 'required|max:2048'
+        ]);
+
+        // Save assets temporarily
+        $assets = [];
+        foreach($files as $key=>$file)
+        {
+            $extension = $file->getClientOriginalExtension();
+            $timestamp = round(microtime(true) * 1000);
+            $filename = "{$timestamp}_{$key}.{$extension}";
+            $location = $file->storeAs('public/assets/applications', $filename);
+            $assets[$key] = [
+                'extension' => $extension,
+                'location' => $location
+            ];
+        }
+        Session::put('new_application_assets', $assets);
         return redirect('create-application_3');
     }
 
@@ -129,18 +157,42 @@ class ApplicationController extends Controller
 
     public function create_form_step_three(Request $request)
     {
+        // Create application
         $new_application = Session::get('new_application', []);
         $new_application['status'] = 'in-review';
-        $this->save($new_application);
+        $new_application['user_id'] = Auth::user()->id;
+        $new_application['application_date'] = now();
+        $application = $this->save($new_application);
+
+
+        // Assign assets
+        $assets = Session::get('new_application_assets', []);
+        foreach($assets as $key=>$asset)
+        {
+            Asset::create([
+                'application_id' => $application->id,
+                'asset_type' => $key,
+                'location' => $asset['location'],
+                'file_type' => $asset['extension']
+            ]);
+        }
+
         return redirect('applications');
     }
 
     // save application
     public function save(Array $data)
     {
-        $data['user_id'] = Auth::user()->id;
-        $data['application_date'] = now();
-        Application::create($data);
+        if(!$data['user_id']){
+            $data['user_id'] = Auth::user()->id;
+        }
+
+        if(!$data['status']){
+            $data['status'] = 'draft';
+        }
+
+        $application = Application::create($data);
+        return $application;
     }
 
 
@@ -163,7 +215,20 @@ class ApplicationController extends Controller
      */
     public function show(Application $application)
     {
-        return view("applications/show", ['application' => $application]);
+        $fields = $application->attributesToArray();
+        $assets = $application->assets;
+
+        foreach($assets as $asset)
+        {
+            $fields[$asset->asset_type] = $asset->location;
+        }
+
+        return view(
+            "applications/show",
+            [
+                'fields' => $fields,
+            ]
+        );
     }
 
     /**

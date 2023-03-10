@@ -13,6 +13,7 @@ class Asset extends Model
         'application_id',
         'asset_type',
         'location',
+        'file_type'
     ];
 
 
