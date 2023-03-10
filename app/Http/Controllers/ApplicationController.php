@@ -114,7 +114,7 @@ class ApplicationController extends Controller
 
     public function create_form_step_two(Request $request)
     {
-
+        dd($request);
         return redirect('create-application_3');
     }
 
