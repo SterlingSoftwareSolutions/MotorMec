@@ -1058,7 +1058,7 @@ select {
   }
   .container1 .card-name:hover {
     box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
-        /* transform: translateY(-10px); */
+    transform: translateY(-3px);
 
   }
   .container1 .card-name:before {
@@ -1155,3 +1155,6 @@ select {
     stroke-dashoffset: calc(440 - (440 * 25) / 100);
     stroke: #737373;
   }
+
+
+  
