@@ -21,7 +21,7 @@
         </ul>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/"><i class="fas fa-credit-card"></i> Billing</a>
+        <a class="nav-link" href="/billing"><i class="fas fa-credit-card"></i> Billing</a>
       </li>
     </ul>
   </div>

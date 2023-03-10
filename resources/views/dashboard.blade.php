@@ -13,7 +13,7 @@
             <circle cx="70" cy="70" r="70"></circle>
           </svg>
           <div class="number">
-            <p class="c-text">Total Applications</p> <span class="c-number">100</span>
+            <p class="c-text">Total Applications</p> <span class="c-number">50</span>
 
           </div>
         </div>
