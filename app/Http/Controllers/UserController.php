@@ -16,6 +16,10 @@ class UserController extends Controller
     {
         User::all();
     }
+    public function profile()
+    {
+        return view('user/profile');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -58,7 +62,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        print_r($user);
+        dd($user);
     }
 
     /**
