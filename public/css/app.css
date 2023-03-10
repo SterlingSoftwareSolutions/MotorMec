@@ -1151,11 +1151,11 @@ select {
     transform-origin: center;
   }
   .card-name:nth-child(1) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke-dashoffset: 0;
     stroke: #00a1ff;
   }
   .card-name:nth-child(2) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+    stroke-dashoffset: 75;
     stroke: #ff960d;
   }
   .card-name:nth-child(3) svg circle:nth-child(2) {
