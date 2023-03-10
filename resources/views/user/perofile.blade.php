@@ -11,14 +11,13 @@
 <body>
     <div class="container">
         @if (Auth::guest())
-            <h1 class="title">You are not logged in</h1>
+
         @else
             <form class="mx-auto p-4 shadow mt-4 rounded" method="post" action="users/{{Auth::user()->id}}">
                 @csrf
                 @method('put')
                 <h1 class="title mb-3">{{ucwords(Auth::user()->name)}}'s Profile</h1>
                 <div class="table mb-3">
-
                     <!-- Name -->
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>

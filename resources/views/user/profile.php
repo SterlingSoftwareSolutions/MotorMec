@@ -69,7 +69,10 @@
   </div>
 </form>
 
+<select name="" id="">
+  <option value="">value one</option>
+  <option value="">value 2</option>
+  <option value="">value 3</option>
+</select>
 
-</div>
-</div>
 @endsection

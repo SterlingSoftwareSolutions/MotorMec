@@ -17,7 +17,7 @@
       <ul class="dropdown-menu profile-menu" aria-labelledby="dropdownMenu2" id="profile-dropdown">
         <li><a class="dropdown-item profile-btn" href="/profile"><i class="fa fa-user align-middle"></i>Profile</a></li>
         <li><a class="dropdown-item profile-btn" href="/billing"><i class="fa fa-credit-card align-middle"></i>Billing</a></li>
-        <li><a class="dropdown-item logout-btn" href="#"><i class="fas fa-sign-out-alt align-middle"></i>Logout</a></li>
+        <li><a class="dropdown-item logout-btn" href="/logout"><i class="fas fa-sign-out-alt align-middle"></i>Logout</a></li>
       </ul>
     </div>
 

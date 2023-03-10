@@ -5,6 +5,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\ClientDashboardController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,14 +29,11 @@ Route::get('/view/{view}', function ($view) {
     return view($view);
 });
 
-
 // All the routes for the logged in users 
 Route::group(['middleware' => 'auth'], function () {
 
     // user profile 
-    Route::get('profile', function () {
-        return view('userProfile');
-    });
+    Route::get('profile', [UserController::class, 'profile']);
 
     //Create Applications
     Route::get('create-application', [ApplicationController::class, 'show_Step_one']);//Show Step one
@@ -46,7 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('create-application_3', [ApplicationController::class, 'show_Step_three']);//Show Step Three
     Route::post('create_step_three', [ApplicationController::class, 'create_form_step_three']);//Save Step Three and Complete
-
 
     //View Applications
     Route::get('applications', [ApplicationController::class, 'list']);
@@ -62,3 +59,5 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('dashboard', [ClientDashboardController::class, 'index']);
     });
 });
+
+
