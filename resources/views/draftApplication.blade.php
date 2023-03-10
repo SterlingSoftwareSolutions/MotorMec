@@ -5,10 +5,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Completed Application</title>
+   <title>Draft Application</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-   <link rel='stylesheet' type='text/css' media='screen' href="{{ asset('css/completedview.css') }}">
+   <link rel='stylesheet' type='text/css' media='screen' href="{{ asset('css/draftview.css') }}">
    <script src="https://kit.fontawesome.com/f10bec2d43.js" crossorigin="anonymous"></script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -19,12 +19,12 @@
 <div class="container">
    <div class="row mt-5 ml-5 text-success fw-bold d-flex align-items-center">
       <div class="col-5">
-         <div class="row "><i style="width: 10px;  " class="fa fa-chevron-left mt-1 " id="chevron-left"></i>
+      <div class="row "><i style="width: 10px;  " class="fa fa-chevron-left mt-1 " id="chevron-left"></i>
             <div style="font-size: 20px; width:50px; margin-left: -10px; margin-top:-5px ;">Back</div>
          </div>
 
       </div>
-      <div class="col-7 applicationrdraftid">
+      <div class="col-7 " style="margin-left:-100px !important;">
          <h2>Application #123</h2>
       </div>
    </div>
@@ -34,11 +34,10 @@
  
    <div class="row rounded-2 border border-secondary border-1 p-3 mt-4">
             <div class="col-md-1 align-self-center text-center mt-1" id="statusbar">Status : </div>
-            <div class="col-md-1 rounded-2 border border-success border-2 p-2 text-success text-center" id="completedbar">Completed</div>
-            <div class="col-md offset-6"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="compliance">Start Compliance</button>
+            <div class="col-md-1 rounded-2 border border-secondary border-2 p-2 text-secondary text-center" id="completedbar">Draft</div>
+            <div class="col-md offset-6">
             </div>
-            <div class="col-md"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="via"><i
-                        class="bi bi-download me-2" ></i>VIA</button></div>
+            <div class="col-md"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="via">Edit</button></div>
         </div>
 
 
@@ -74,8 +73,8 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">123</h6>
-            <h6 class="col text-secondary">22/02/2022</h6>
+            <h6 class="col text-secondary">Not set</h6>
+            <h6 class="col text-secondary">Not set</h6>
          </div>
 
          <div class="row mt-3">
@@ -84,8 +83,8 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">Toyota</h6>
-            <h6 class="col text-secondary">Supra</h6>
+            <h6 class="col text-secondary">Not set</h6>
+            <h6 class="col text-secondary">Not set</h6>
          </div>
 
          <div class="row mt-3">
@@ -94,8 +93,8 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">22/02/2000</h6>
-            <h6 class="col text-secondary">Petrol</h6>
+            <h6 class="col text-secondary">Not set</h6>
+            <h6 class="col text-secondary">Not set</h6>
          </div>
 
          <div class="row mt-3">
@@ -104,8 +103,8 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">Auto</h6>
-            <h6 class="col text-secondary">Crossover</h6>
+            <h6 class="col text-secondary">Not set</h6>
+            <h6 class="col text-secondary">Not set</h6>
          </div>
 
          <div class="row mt-3">
@@ -114,7 +113,7 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">Front Wheel Drive</h6>
+            <h6 class="col text-secondary">Not set</h6>
 
          </div>
 
@@ -124,7 +123,7 @@
          </div>
 
          <div class="row">
-            <h6 class="col text-secondary">Seats 1</h6>
+            <h6 class="col text-secondary">Not set</h6>
 
 
 
@@ -147,11 +146,12 @@
                <p class="col fs-6">Front Left Corner</p>
             </div>
 
-            <div class="row  ">
-               <img src="{{asset('images/Frontleftcorner.jpg')}}" style=" height:120px; border-radius: 15px;" class="img-fluid col fs-6">
-               <img src="{{asset('images/Frontrightcorner.jpg')}}" style=" height:120px; border-radius: 15px;" class="img-fluid col fs-6">
-               <img src="{{asset('images/Frontleftcorner.jpg')}}" style=" height:120px; border-radius: 15px;" class="img-fluid col fs-6">
-               <img src="{{asset('images/Frontrightcorner.jpg')}}" style="height:120px; border-radius: 15px;" class="img-fluid col fs-6">
+            <div class="row">
+            <img src="{{asset('images/Frontrightcorner.jpg')}}" style="height:110px; border-radius: 16px;" class="img-fluid col fs-6 exte-img">
+               
+               <div style="height:110px; border-radius: 8px; border: 1px solid #707070; ;margin-right: 5px;" class="img-fluid col fs-6"></div>
+               <div style="height:110px; border-radius: 8px; border: 1px solid #707070; ;margin-right: 5px;" class="img-fluid col fs-6"></div>
+               <div style="height:110px; border-radius: 8px; border: 1px solid #707070; ;margin-right: 10px;" class="img-fluid col fs-6"></div>
             </div>
 
             <div class="row mt-4">
@@ -177,16 +177,16 @@
                      <img src="{{asset('images/internal0.jpg')}}" style="width: 300px; height:90px; border-radius: 3px; " class="img-fluid">
                   </div>
                   <div class="col-2">
-                     <img src="{{asset('images/internal1.jpg')}}" style="width: 300px; height:90px; border-radius: 3px;" class="img-fluid ">
+                    
                   </div>
                   <div class="col-2">
-                     <img src="{{asset('images/internal0.jpg')}}" style="width: 300px; height:90px;  border-radius: 3px;" class="img-fluid">
+                    
                   </div>
                   <div class="col-2">
-                     <img src="{{asset('images/internal1.jpg')}}" style="width: 300px; height:90px;  border-radius: 3px;" class="img-fluid ">
+                   
                   </div>
                   <div class="col-2">
-                     <img src="{{asset('images/internal0.jpg')}}" style="width: 300px; height:90px;  border-radius: 3px;" class="img-fluid">
+                    
                   </div>
                </div>
 
@@ -212,15 +212,15 @@
 
                <div class="row">
 
-                  <img src="{{asset('images/Engine.jpeg')}}" style=" height:120px; border-radius: 15px;" class="img-fluid col fs-6">
-                  <img src="{{asset('images/Chessis.jpg')}}" style=" height:120px; border-radius: 15px;" class="img-fluid col fs-6">
+               <div style="height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6"></div>
+               <div style="height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6"></div>
                   <p class="col fs-6"></p>
                   <p class="col fs-6"></p>
                </div>
 
 
                <div class="row mt-4">
-                  <h6 class="col-2 text-success fw-bold">Additional Images</h6>
+                  <h6 class="col-2 text-success fw-bold">Documents</h6>
                   <div class="col-9 position-relative mt-2">
                   <div class="progress" style="width: 880px; height: 1px;">
                         <div class="progress-bar bg-success " role="progressbar" style="width:890px " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -240,9 +240,9 @@
 
                <div class="row ">
 
-                  <img src="{{asset('images/Invoice.jpg')}}" style=" height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6">
-                  <img src="{{asset('images/exportCertificate.jpg')}}" style=" height:120px; border-radius: 8px; border: 1px solid #707070;; margin-left: 10px;" class="img-fluid col fs-6">
-                  <img src="{{asset('images/Auctionreport.jpg')}}" style=" height:120px; border-radius: 8px; border: 1px solid #707070; margin-left: 10px;" class="img-fluid col fs-6">
+                  <div style="height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6"></div>
+                  <div style="height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6"></div>
+                  <div style="height:120px; border-radius: 8px; border: 1px solid #707070; ;margin-left: 10px;" class="img-fluid col fs-6"></div>
                   <p class="col fs-6"></p>
                </div>
 
@@ -264,20 +264,19 @@
                </div>
 
                <div class="row">
-                  <h6 class="col text-secondary">123</h6>
-                  <h6 class="col text-secondary">123</h6>
+                  <h6 class="col text-secondary">Not set</h6>
+                  <h6 class="col text-secondary">Not set</h6>
                </div>
 
                
-              <div class="row mt-5">
-              <div class="col-md offset-6"><button type="button" class="btn btn-secondary btn-sm w-100 fs-6" id="completedbelowback">Back</button>
-            </div>
-            <div class="col-md"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="belowcompliance">Start Compliance</button>
-            </div>
+               <div class="row pb-4 mt-5">
+                <div class="col-md offset-6"><button type="button" class="btn btn-secondary btn-sm w-100 fs-6" id="rejectedbelowback">Back</button>
+                </div>
+                <div class="col-md">
+                </div>
 
-                        <div class="col-md"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="belowvia"><i
-                        class="bi bi-download me-2" ></i>VIA</button></div>
-              
+                <div class="col-md"><button type="button" class="btn btn-success btn-sm w-100 fs-6" id="belowedit">Edit</button></div>
+            </div>
 
 
 

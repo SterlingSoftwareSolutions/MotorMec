@@ -1,0 +1,48 @@
+/*---*/
+
+#compliance {
+    margin-left: 1em !important;
+   
+    width: 140px;
+    height: 2.8em !important;
+}
+
+#via {
+    margin-left: 1em !important;
+    width: 140px;
+    height: 2.8em !important;
+
+}
+#statusbar {
+    margin-left: -30px;
+    margin-top: -20px;
+    text-align: center;
+
+}
+#completedbar{
+    margin-left: -20px;
+   
+ }
+
+ #rejectedbelowback{
+    width: 140px;
+    height: 2.8em !important;
+    margin-left: -35em !important;
+}
+
+#belowedit{
+    margin-left: -1em !important;
+    width: 140px;
+    height: 2.8em !important;
+}
+
+#chevron-left {
+    margin-left: -10px;
+}
+
+#back {
+    margin-top: -1px !important;
+    width: 12em !important;
+    height: 3em !important;
+}
+

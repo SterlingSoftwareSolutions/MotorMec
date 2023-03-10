@@ -1,0 +1,74 @@
+.notes{
+    border: 1px solid red;
+    width: 1140px;
+    margin-left:-14px ;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-bottom: 12px;
+}
+
+#statusbar{
+
+    margin-left: -20px;
+}
+
+#rejectedbar{
+    margin-left: -20px;
+}
+
+
+#rejectedbelowback{
+    width: 140px;
+    height: 2.8em !important;
+    margin-left: -35em !important;
+}
+
+#belowedit{
+    margin-left: -2.em !important;
+    width: 140px;
+    height: 2.8em !important;
+}
+
+.applicationrejectionid{
+    margin-left:-100px !important;
+}
+
+#aboverejectededit{
+    margin-left:20px !important;
+}
+
+
+/*---*/
+
+#compliance {
+    margin-left: 1em !important;
+   
+    width: 140px;
+    height: 2.8em !important;
+}
+
+#via {
+    margin-left: 1em !important;
+    width: 140px;
+    height: 2.8em !important;
+
+}
+#statusbar {
+    margin-left: -30px;
+    margin-top: -20px;
+    text-align: center;
+
+}
+#completedbar{
+    margin-left: -20px;
+ }
+
+ #chevron-left {
+    margin-left: -10px;
+}
+
+ #back {
+    margin-top: -1px !important;
+    width: 12em !important;
+    height: 3em !important;
+}

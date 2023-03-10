@@ -1,0 +1,81 @@
+.bac-btn {
+    width: fit-content;
+    margin-left: 4em !important;
+}
+
+.applicationrdraftid {
+    margin-left:-100px !important;
+}
+
+
+
+#belowcompliance {
+    margin-left: -1em !important;
+ 
+    width: 140px;
+    height: 2.8em !important;
+}
+
+#belowvia {
+    margin-left: -1em !important;
+    width: 140px;
+    height: 2.8em !important;
+   
+}
+
+
+
+
+#completedbelowback {
+    width: 140px;
+    height: 2.8em !important;
+    margin-left: -35em !important;
+    
+
+}
+
+#mainborder{
+
+padding-bottom: 30px;
+}
+
+#completedbar{
+   margin-left: -20px;
+}
+
+
+
+/*---*/
+
+#compliance {
+    margin-left: 1em !important;
+   
+    width: 140px;
+    height: 2.8em !important;
+}
+
+#via {
+    margin-left: 1em !important;
+    width: 140px;
+    height: 2.8em !important;
+
+}
+#statusbar {
+    margin-left: -30px;
+    margin-top: -20px;
+    text-align: center;
+
+}
+#completedbar{
+    margin-left: -20px;
+ }
+
+ #back {
+    margin-top: -1px !important;
+    width: 12em !important;
+    height: 3em !important;
+}
+
+#chevron-left {
+    margin-left: -10px;
+}
