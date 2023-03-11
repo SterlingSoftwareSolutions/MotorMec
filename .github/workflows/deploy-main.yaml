@@ -33,4 +33,3 @@ jobs:
         server: 184.168.113.105
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: ./backend/
