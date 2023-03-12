@@ -13,13 +13,6 @@ jobs:
 
     - name: Use production env
       run: cp .env.example .env
-
-    - name: Update .env
-      run: |
-        sed -i 's/ACTIONS_URL/staging.motormec.com.au/g' .env
-        sed -i 's/ACTIONS_DB_NAME/motormec/g' .env
-        sed -i 's/ACTIONS_DB_USER/${{ secrets.db_user }}/g' .env
-        sed -i 's/ACTIONS_DB_PASSWORD/${{ secrets.db_password }}/g' .env
     
     - name: Install vendors
       run: composer install --no-dev --optimize-autoloader
