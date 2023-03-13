@@ -74,7 +74,6 @@ class ApplicationController extends Controller
         $this->new_application['body_type'] = $request->input('bodyType');
         $this->new_application['drive_type'] = $request->input('driveType');
         $this->new_application['seats'] = $request->input('seatRow1');
-       dd("vh");
         return redirect('create-application_2');
     }
 

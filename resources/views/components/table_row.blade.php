@@ -51,7 +51,7 @@
         @elseif($application->status === "Submitted")
         <button disabled class="btn btn-outline-warning draft-btn mt-5">Submitted</button>
         @elseif($application->status === "Completed")
-        <button disabled class="btn btn-outline-success draft-btn mt-5">Completed</button>
+        <button disabled class="btn btn-outline-success draft-btn mt-5 completed">Completed</button>
         @elseif($application->status === "In Compliance")
         <button disabled class="btn btn-outline-warning draft-btn mt-5">In Compliance</button>
         @elseif($application->status === "VIA Granted")
