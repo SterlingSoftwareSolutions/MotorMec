@@ -35,10 +35,10 @@
     <div class="hr">&nbsp;</div>
     <div class="d-row">
         <div class="column col-6 col-md-3">
-            <label for="file3">Front Right Corner*</label>
+            <label for="file3">Front Left Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" name="img_front_right" id="file3" onchange="previewImage(this, 'preview3', 'remove3', 'uploadBtn3')" multiple>
+                    <input type="file" name="img_front_left" id="file3" onchange="previewImage(this, 'preview3', 'remove3', 'uploadBtn3')" multiple>
                     <div id="preview3"></div>
                     <span class="upload-text" id="uploadBtn3">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -49,10 +49,10 @@
             </div>
         </div>
         <div class="column col-6 col-md-3">
-            <label for="file4">Rear Right Corner*</label>
+            <label for="file4">Front Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" name="img_rear_right" id="file4" onchange="previewImage(this, 'preview4', 'remove4', 'uploadBtn4')" multiple>
+                    <input type="file" name="img_front_right" id="file4" onchange="previewImage(this, 'preview4', 'remove4', 'uploadBtn4')" multiple>
                     <div id="preview4"></div>
                     <span class="upload-text" id="uploadBtn4">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -112,10 +112,10 @@
     <div class="hr">&nbsp;</div>
     <div class="d-row">
         <div class="column">
-            <label for="file7">Front Right Corner*</label>
+            <label for="file7">Invoice*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file7" onchange="previewImage(this, 'preview7', 'remove7', 'uploadBtn7')" multiple>
+                    <input type="file" name="doc_invoice" id="file7" onchange="previewImage(this, 'preview7', 'remove7', 'uploadBtn7')" multiple>
                     <div id="preview7"></div>
                     <span class="upload-text" id="uploadBtn7">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -126,10 +126,10 @@
             </div>
         </div>
         <div class="column">
-            <label for="file8">Rear Right Corner*</label>
+            <label for="file8">Export Certificate*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file8" onchange="previewImage(this, 'preview8', 'remove8', 'uploadBtn8')" multiple>
+                    <input type="file" name="doc_export_certificate" id="file8" onchange="previewImage(this, 'preview8', 'remove8', 'uploadBtn8')" multiple>
                     <div id="preview8"></div>
                     <span class="upload-text" id="uploadBtn8">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -139,10 +139,10 @@
             </div>
         </div>
         <div class="column">
-            <label for="file9">Rear Left Corner*</label>
+            <label for="file9">Auction Report*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file9" onchange="previewImage(this, 'preview9', 'remove9', 'uploadBtn9')" multiple>
+                    <input type="file" name="doc_auction_report" id="file9" onchange="previewImage(this, 'preview9', 'remove9', 'uploadBtn9')" multiple>
                     <div id="preview9"></div>
                     <span class="upload-text" id="uploadBtn9">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
