@@ -7,7 +7,7 @@
             <label for="file1">Engine*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file1" onchange="previewImage(this, 'preview1', 'remove1', 'uploadBtn1')" multiple>
+                    <input type="file" name="img_engine" id="file1"  onchange="previewImage(this, 'preview1', 'remove1', 'uploadBtn1')" multiple>
                     <div id="preview1"></div>
                     <span class="upload-text" id="uploadBtn1">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -21,7 +21,7 @@
             <label for="file2">Chassis/ Frame Photo*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file2" onchange="previewImage(this, 'preview2', 'remove2', 'uploadBtn2')" multiple>
+                    <input type="file" name="img_chassis" id="file2" onchange="previewImage(this, 'preview2', 'remove2', 'uploadBtn2')" multiple>
                     <div id="preview2"></div>
                     <span class="upload-text" id="uploadBtn2">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -38,7 +38,7 @@
             <label for="file3">Front Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file3" onchange="previewImage(this, 'preview3', 'remove3', 'uploadBtn3')" multiple>
+                    <input type="file" name="img_front_right" id="file3" onchange="previewImage(this, 'preview3', 'remove3', 'uploadBtn3')" multiple>
                     <div id="preview3"></div>
                     <span class="upload-text" id="uploadBtn3">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -52,7 +52,7 @@
             <label for="file4">Rear Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file4" onchange="previewImage(this, 'preview4', 'remove4', 'uploadBtn4')" multiple>
+                    <input type="file" name="img_rear_right" id="file4" onchange="previewImage(this, 'preview4', 'remove4', 'uploadBtn4')" multiple>
                     <div id="preview4"></div>
                     <span class="upload-text" id="uploadBtn4">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -65,7 +65,7 @@
             <label for="file5">Rear Left Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file5" onchange="previewImage(this, 'preview5', 'remove5', 'uploadBtn5')" multiple>
+                    <input type="file" name="img_rear_left" id="file5" onchange="previewImage(this, 'preview5', 'remove5', 'uploadBtn5')" multiple>
                     <div id="preview5"></div>
                     <span class="upload-text" id="uploadBtn5">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -79,7 +79,7 @@
             <label for="file6">Rear Right Corner*</label>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file6" onchange="previewImage(this, 'preview6', 'remove6', 'uploadBtn6')" multiple>
+                    <input type="file" name="img_rear_right" id="file6" onchange="previewImage(this, 'preview6', 'remove6', 'uploadBtn6')" multiple>
                     <div id="preview6"></div>
                     <span class="upload-text" id="uploadBtn6">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
@@ -99,7 +99,7 @@
             </div>
             <div class="box">
                 <div class="btn_upload">
-                    <input type="file" id="file-input" multiple>
+                    <input type="file" name="img_interior" id="file-input" multiple>
                     <span class="upload-text" id="uploadBtn6">
                         <img src="{{asset('images/upload.png')}}" alt="upload image">
                     </span>
