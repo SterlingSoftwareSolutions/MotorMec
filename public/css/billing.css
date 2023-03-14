@@ -73,10 +73,86 @@
    .col-heading{
        font-size: 13px; 
    }
+
+
+
+   #billingbox{
+    margin-left: -2px;
+   }
    
    /*billing Mobile*/
-   
    @media (max-width: 767px) {
+
+ #billing_main {
+  margin-left: 20px !important;
+  text-align: center !important;
+
+               }
+
+  #status{
+
+    width: 63px !important;
+    margin-left: 185px !important;
+  
+    
+  }     
+  
+   #dropdownMenuLink{
+
+   width: 65px !important;
+   margin-left: 34px;
+   }
+
+#search1{
+
+    margin-left: -20px !important;
+    width: 200px !important;
+    margin-top: -38px;
+}
+
+
+#due{
+   font-size: 13px;
+   width: 130px;
+   margin-left: 100px;
+ font-weight: bold;
+ height: auto;
+ margin-top: -10px;
+ 
+}
+
+#aud2600{
+
+    width: 100px;
+    height: auto;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* @media (max-width: 767px) {
        .billing-main {
            height: 50px !important;
        }
@@ -87,8 +163,9 @@
            padding: 0px !important;
        }
    
-       .status {
+       .status_class {
            margin-top: -20px !important;
+           border: 1px solid red;
        }
    
        .image-cart img {
@@ -156,5 +233,5 @@
            margin: 5px 0 0 20px;
        }
    
-   }
+   } */
    

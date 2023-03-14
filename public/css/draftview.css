@@ -7,8 +7,8 @@
     height: 2.8em !important;
 }
 
-#via {
-    margin-left: 1em !important;
+#aboveedit {
+    margin-left: 2em !important;
     width: 140px;
     height: 2.8em !important;
 
@@ -24,14 +24,14 @@
    
  }
 
- #rejectedbelowback{
+ #draftbelowback{
     width: 140px;
     height: 2.8em !important;
     margin-left: -35em !important;
 }
 
 #belowedit{
-    margin-left: -1em !important;
+    margin-left: 2px !important;
     width: 140px;
     height: 2.8em !important;
 }
@@ -46,3 +46,12 @@
     height: 3em !important;
 }
 
+
+/* 
+@media (min-width: 576px)
+ {
+
+    #aboveedit{
+     border: 1px solid red;
+    }
+  } */

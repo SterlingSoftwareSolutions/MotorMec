@@ -59,14 +59,12 @@
          </div>
 
          <div class="row mt-4">
-            <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
-            <div class="col-10  position-relative mt-2">
-               <div class="progress" style="width: 890px; height: 1px;">
-                  <div class="progress-bar bg-success " role="progressbar" style=width:890px; aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
+               <div class="col-10  position-relative mt-2">
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
             </div>
-         </div>
-
+            </div>
 
          <div class="row mt-3">
             <h6 class="col">Chassis/Frame Number</h6>
@@ -110,32 +108,28 @@
 
          <div class="row mt-3">
             <h6 class="col ">Drive Type</h6>
-
          </div>
 
          <div class="row">
             <h6 class="col text-secondary">Front Wheel Drive</h6>
-
          </div>
 
          <div class="row mt-3">
             <h6 class="col ">Seating Placement</h6>
-
          </div>
 
          <div class="row">
             <h6 class="col text-secondary">Seats 1</h6>
-
+         </div>
 
 
 
             <div class="row mt-4">
-               <h6 class="col-2 text-success fw-bold">Exterior Images</h6>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
                <div class="col-10  position-relative mt-2">
-                  <div class="progress" style="height: 1px;">
-                     <div class="progress-bar bg-success " role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
+            </div>
             </div>
 
 
@@ -155,12 +149,11 @@
             </div>
 
             <div class="row mt-4">
-               <h6 class="col-2 text-success fw-bold">Interior Images</h6>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
                <div class="col-10  position-relative mt-2">
-                  <div class="progress" style="height: 1px;">
-                     <div class="progress-bar bg-success " role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
+            </div>
             </div>
 
             <div class="row">
@@ -169,8 +162,8 @@
 
             </div>
 
-            <div class="container" >
-               <div class="row border border-dark rounded-3 p-2" style="  width: 1070px; margin-left: -2px;">
+            <!-- <div class="container" > -->
+               <div class="row border border-dark rounded-3 p-2" style="  width: 96%; margin-left: 10px;">
 
 
                   <div class="col-2">
@@ -190,16 +183,13 @@
                   </div>
                </div>
 
-
                <div class="row mt-4">
-                  <h6 class="col-2 text-success fw-bold">Additional Images</h6>
-                  <div class="col-9 position-relative mt-2">
-                  <div class="progress" style="width: 880px; height: 1px;">
-                        <div class="progress-bar bg-success " role="progressbar" style="width:890px " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  </div>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
+               <div class="col-10  position-relative mt-2">
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
-
+            </div>
+            </div>
 
                <div class="row">
 
@@ -220,13 +210,12 @@
 
 
                <div class="row mt-4">
-                  <h6 class="col-2 text-success fw-bold">Additional Images</h6>
-                  <div class="col-9 position-relative mt-2">
-                  <div class="progress" style="width: 880px; height: 1px;">
-                        <div class="progress-bar bg-success " role="progressbar" style="width:890px " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  </div>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
+               <div class="col-10  position-relative mt-2">
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
+            </div>
+            </div>
 
 
                <div class="row">
@@ -249,13 +238,12 @@
 
 
                <div class="row mt-4">
-                  <h6 class="col-2 text-success fw-bold">Additional Info</h6>
-                  <div class="col-9 position-relative mt-2">
-                  <div class="progress" style="width: 880px; height: 1px;">
-                        <div class="progress-bar bg-success " role="progressbar" style="width:890px " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  </div>
+               <h6 class="col-2 text-success fw-bold">Vehicle Info</h6>
+               <div class="col-10  position-relative mt-2">
+               <div class="progress-bar bg-success " style="width:100%; height: 1px;"> 
                </div>
+            </div>
+            </div>
 
 
                <div class="row mt-3">
@@ -268,7 +256,6 @@
                   <h6 class="col text-secondary">123</h6>
                </div>
 
-               
               <div class="row mt-5">
               <div class="col-md offset-6"><button type="button" class="btn btn-secondary btn-sm w-100 fs-6" id="completedbelowback">Back</button>
             </div>
@@ -281,7 +268,7 @@
 
 
 
-            </div>
+            <!-- </div> -->
 
          </div>
          </div>

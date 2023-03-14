@@ -1,6 +1,6 @@
 .notes{
     border: 1px solid red;
-    width: 1140px;
+    
     margin-left:-14px ;
     margin-top: 20px;
     border-radius: 5px;
@@ -15,7 +15,6 @@
 #rejectedbar{
     margin-left: -20px;
 }
-
 
 #rejectedbelowback{
     width: 140px;
@@ -47,8 +46,8 @@
     height: 2.8em !important;
 }
 
-#via {
-    margin-left: 1em !important;
+#rejectaboveedit {
+    margin-left: 2em !important;
     width: 140px;
     height: 2.8em !important;
 

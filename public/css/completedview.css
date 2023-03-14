@@ -10,14 +10,13 @@
 
 
 #belowcompliance {
-    margin-left: -1em !important;
- 
+    margin-left: 4px !important;
     width: 140px;
     height: 2.8em !important;
 }
 
 #belowvia {
-    margin-left: -1em !important;
+    margin-left: 2px !important;
     width: 140px;
     height: 2.8em !important;
    
@@ -48,14 +47,13 @@ padding-bottom: 30px;
 /*---*/
 
 #compliance {
-    margin-left: 1em !important;
-   
+    margin-left: 2em !important;
     width: 140px;
     height: 2.8em !important;
 }
 
 #via {
-    margin-left: 1em !important;
+    margin-left: 2em !important;
     width: 140px;
     height: 2.8em !important;
 

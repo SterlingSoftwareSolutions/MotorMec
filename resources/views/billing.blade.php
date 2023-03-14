@@ -10,13 +10,13 @@
 
 
 <div class="container">
-    <div class="row billing-main">
+    <div class="row" id="billing_main">
         <h1 class="col text-success my-5  text-start md-5">Billing Information</h1>
     </div>
 
     <div class="row">
-        <div class="col-1 mt-2">
-            <h6 class="status_class">Status</h6>
+        <div class="col-1 mt-2" id="status"> 
+            <h6 class>Status</h6>
         </div>
         <div class="col-1 ms-2">
             <div class="dropdown" id="dropdown1">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="col-4 " id="search1">
+        <div class="col-lg-4 " id="search1">
             <input type="search" class="form-control border border-dark ms-2" placeholder="Search" />
         </div>
 
@@ -34,32 +34,33 @@
 
         </div>
 
-        <div class="col-4 d-flex value-style">
-            <div class="col-8 ms-2 due-class">
-                <p class="due-class ms-2 mt-1 ">Total Due Amount:</p>
+        <div class="col-lg-4 col-3 d-flex value-style">
+            <div class="col-lg-8 ms-2 due-class">
+                <p class="due-class ms-2 mt-1 " id="due">Total Due Amount:</p>
             </div>
-            <div class="col-4  mt-2 fs-5 text-danger">
+            <div class="col-lg-4 col-3 mt-2 fs-5 text-danger" id="aud2600">
                 <p>AUD 2600</p>
             </div>
         </div>
+          
 
     </div>
 
     <div class="row table-heading fs-7 ">
-        <div class="col-lg-1 col-2">Photo</div>
-        <div class="col-lg-2 col-4 ms-4">Application ID</div>
-        <div class="col-lg-1 col-4 ms-4">Car</div>
-        <div class="col-lg-2 col-4 ms-3 ">Total Value</div>
-        <div class="col-lg-2 col-2 ms-4">Paid Amount</div>
+        <div class="col-lg-1 col-3">Photo</div>
+        <div class="col-lg-2 col-3 ms-4">Application ID</div>
+        <div class="col-lg-1 col-3 ms-4">Car</div>
+        <div class="col-lg-2 col-3 ms-3 ">Total Value</div>
+        <div class="col-lg-2 col-3 ms-4">Paid Amount</div>
         <div class="col-lg-3 col-3">Remain Amount</div>
     </div>
   
 
-    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
-        <div class="col-1 p-0 image-cart">
+    <div class="row border border-dark rounded-3 mt-3 col-heading fs-7" id="billingbox">
+        <div class="col-lg-1 col-3 p-0 image-cart">
             <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
-        <div class="col-2 my-auto col app-id">
+        <div class="col-lg-2 col-1 my-auto col app-id">
             <p class="text-start px-4">S1047</p>
         </div>
         <div class="col-1 my-auto car">
@@ -89,7 +90,7 @@
 
 
 
-    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
+    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7" id="billingbox">
         <div class="col-1 p-0 image-cart">
             <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
@@ -125,7 +126,7 @@
         </div>
     </div>
 
-    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7">
+    <div class="row border border-dark rounded-3  mt-3 col-heading fs-7" id="billingbox">
         <div class="col-1 p-0 image-cart">
             <img src="{{asset('images/Nissan-GTR-R35-2008-4.jpeg')}}" class="image rounded">
         </div>
