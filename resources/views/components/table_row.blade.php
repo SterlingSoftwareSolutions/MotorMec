@@ -45,7 +45,9 @@
     </td>
     <td>
         <div>
-            <button class="btn btn-dark view-btn mt-4 ">View</button>
+            <a href="/applications/{{$application->id}}">
+                <button class="btn btn-dark view-btn mt-4">View</button>
+            </a>
             <button class="btn btn-dark view-btn mt-1">Edit</button>
             <!-- <button  class="btn btn-dark view-btn mt-1">VIA</button>
                             <button  class="btn btn-dark view-btn mt-1 mb-4">Compliance</button> -->
